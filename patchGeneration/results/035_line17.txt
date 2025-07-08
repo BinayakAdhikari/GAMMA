@@ -1,0 +1,25 @@
+
+function (arr) {             for (var i = 0; i < arr.length; i++) {                 if (arr[i]) {                     return true;                 }             }             return false;         }
+function Line016(arr) {   if (!(this instanceof Line016))     return new Line016(arr);   Emitter.call(this);   this.arr = arr; }
+function (arr) {             for (var i = 0; i < arr.length; i++) {                 if (arr[i] === true) {                     return true;                 }             }             return false;         }
+function (arr) {             for (var i = 0; i < arr.length; i++) {                 if (arr[i] === false) {                     arr.splice(i, 1);                 }             }         }
+function (arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i] === true) { 				arr.splice(i, 1); 			} 		} 	}
+function (arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i] === false) { 				arr.splice(i, 1); 			} 		} 	}
+function Line016(arr) {   if (!(this instanceof Line016))     return new Line016(arr);   Emitter.call(this);   this.arr = arr || []; }
+function (arr) {             for (var i = 0; i < arr.length; i++) {                 if (arr[i] === true) {                     arr.splice(i, 1);                 }             }         }
+function (arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i]) { 				arr.splice(i, 1); 			} 		} 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i] === true) { 				arr.splice(i, 1); 			} 		} 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i] === false) { 				arr.splice(i, 1); 			} 		} 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i]) { 				arr.splice(i, 1); 			} 		} 	}
+function (arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i] === true) { 				return true; 			} 		} 		return false; 	}
+function (arr) {             for (var i = 0; i < arr.length; i++) {                 if (arr[i] === true) {                     return true;                 }             }         }
+function (arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i]) { 				arr[i] = true; 			} 		} 	}
+function (arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i]) { 				arr[i] = true; 			} 		} 		return arr; 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i]) { 				arr[i] = true; 			} 		} 	}
+function (arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i] === false) { 				arr.splice(i--, 1); 			} 		} 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i]) { 				arr[i] = true; 			} 		} 		return arr; 	}
+function (arr) { 		for (var i = 0; i < arr.length; ++i) { 			if (arr[i] === true) { 				arr.splice(i, 1); 			} 		} 	}
+function (arr) {             for (var i = 0; i < arr.length; i++) {                 if (arr[i] === true) {                     arr[i] = false;                 }             }         }
+function (arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i]) { 				arr.splice(i, 1); 			} 		} 		return arr; 	}
+function (arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i] === true) { 				arr[i] = false; 			} 		} 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i]) { 				arr.splice(i, 1); 			} 		} 		return arr; 	}

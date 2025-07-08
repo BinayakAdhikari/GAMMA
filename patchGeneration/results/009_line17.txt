@@ -1,0 +1,25 @@
+
+function Line016(a, b) {   if (!(this instanceof Line016))     return new Line016(a, b);   this.a = a;   this.b = b; }
+function Line016(a, b) {   this.type = 'Line016';   this.a = a;   this.b = b; }
+function Line016(a, b) {   if (!(this instanceof Line016)) return new Line016(a, b);   this.a = a;   this.b = b; }
+function Line016(a, b) {   if (!(this instanceof Line016))     return new Line016(a, b)   this.a = a   this.b = b }
+function Line016(a, b) {     this.type = 'Line016';     this.a = a;     this.b = b; }
+function Line016(a, b) {   if (!(this instanceof Line016))     return new Line016(a, b);   this.a = a || 0;   this.b = b || 0; }
+function Line016(a, b) {   if (!(this instanceof Line016))     return new Line016(a, b);   this.a = +a;   this.b = +b; }
+function Line016(a, b) {     this.type = 'Line';     this.a = a;     this.b = b; }
+function Line016(a, b) {   if (!(this instanceof Line016)) return new Line016(a, b);   this.a = a || 0;   this.b = b || 0; }
+function Line016(a, b) {     this.a = a;     this.b = b;     this.x = 0;     this.y = 0; }
+function Line016(a, b) {   if (!(this instanceof Line016))     return new Line016(a, b);   Module.call(this);   this.a = a;   this.b = b; }
+function Line016(a, b) {   if (!(this instanceof Line016))     return new Line016(a, b);   Emitter.call(this);   this.a = a;   this.b = b; }
+function Line016(a, b) {   if (!(this instanceof Line016))     return new Line016(a, b);   Line016.super_.call(this, a, b); }
+function Line016(a, b) {   this.a = a;   this.b = b;   this.c = 0;   this.d = 0; }
+function Line016(a, b) {   if (!(this instanceof Line016))     return new Line016(a, b)   this.a = a || 0   this.b = b || 0 }
+function Line016(a, b) {     this.a = a;     this.b = b;     this.c = 0;     this.d = 0; }
+function Line016(a, b) {     this.a = a;     this.b = b;     this.c = 0;     this.d = 0;     this.e = 0; }
+function Line016(a, b) {   if (!(this instanceof Line016))     return new Line016(a, b);   this.a = a;   this.b = b || 0; }
+function Line016(a, b) {   if (!(this instanceof Line016))     return new Line016(a, b)   this.a = a   this.b = b
+function Line016(a, b) {   this.a = a;   this.b = b;   this.c = 0;   this.d = 0;   this.e = 0; }
+function Line016(a, b) {     this.a = a;     this.b = b;     this.c = 0;     this.d = 0;     this.e = 0;     this.f = 0; }
+function Line016(a, b) {   if (!(this instanceof Line016))     return new Line016(a, b);   this.a = a || 0;   this.b = b || 1; }
+function Line016(a, b) {   this.a = a;   this.b = b;   this.c = 0;   this.d = 0;   this.e = 0;   this.f = 0; }
+function Line016(a, b) {     this.a = a;     this.b = b;     this.x = 0;     this.y = 0;     this.z = 0; }

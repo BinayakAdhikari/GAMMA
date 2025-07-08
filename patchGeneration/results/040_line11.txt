@@ -1,0 +1,25 @@
+
+function Line010() {   this.type = NodeType.Line010;   this.line = 0;   this.col = 0;   this.value = null;   this.raw = null; }
+function Line010() {   this.type = NodeType.Line010;   this.line1 = null;   this.col1 = null;   this.col2 = null;   this.value = null; }
+function Line010() {   this.type = NodeType.Line010;   this.line = 0;   this.col = 0;   this.value = null;   this.previous = null;   this.next = null; }
+function Line010(node) {     RED.nodes.createNode(this, node);     var node1 = this;     this.on('input', function(msg) {       node1.send(msg);     });   }
+function Line010() {   this.type = NodeType.Line010;   this.line = 0;   this.col = 0;   this.value = null;   this.previous = null;   this.nextSibling = null; }
+function Line010() {   this.type = NodeType.Line010;   this.line1 = null;   this.col1 = null;   this.col2 = null;   this.comment = null; }
+function Line010() {     this.type = NodeType.Line010;     this.line = 0;     this.col = 0;     this.value = null;     this.previous = null;     this.next = null; }
+function Line010() {   this.type = NodeType.Line010;   this.line = 0;   this.col = 0;   this.value = null;   this.previous = null;   this.next = null;   this.stack = []; }
+function Line010() {     this.type = NodeType.Line010;     this.line = 0;     this.col = 0;     this.value = null;     this.previous = null;     this.next = null;   }
+function Line010() {   this.type = NodeType.Line010;   this.line = 0;   this.col = 0;   this.value = null;   this.previous = null;   this.next = null;   this.previousToken = null;   this.nextToken = null; }
+function Line010() {     this.type = NodeType.Line010;     this.line = 0;     this.col = 0;     this.value = null;     this.previous = null;     this.next = null;     this.stack = []; }
+function Line010() {     this.type = NodeType.Line010;     this.line = 0;     this.col = 0;     this.value = null;     this.previous = null;     this.next = null;     this.previousToken = null;     this.nextToken = null;   }
+function Line010() {     this.type = NodeType.Line010;     this.line = 0;     this.col = 0;     this.value = null;     this.previous = null;     this.next = null;     this.previousToken = null;     this.nextToken = null; }
+function Line010() {   this.type = NodeType.Line010;   this.line = 0;   this.col = 0;   this.value = null;   this.previous = null;   this.next = null;   this.previousNode = null;   this.nextNode = null; }
+function Line010() {   this.type = NodeType.Line010;   this.line = 0;   this.col = 0;   this.value = null;   this.previous = null;   this.next = null;   this.previousValue = null;   this.nextValue = null; }
+function Line010(node) {     RED.nodes.createNode(this, node);     var node1 = this;     this.on('input', function(msg) {       node1.send(msg);     });     this.on('close', function() {       node1.send(null);     });   }
+function Line010(node) {     RED.nodes.createNode(this, node);     var node1 = this;     this.on('input', function(msg) {       node1.send(msg);     });     this.on('close', function() {       node1.close();     });   }
+function Line010() {     this.type = NodeType.Line010;     this.line = 0;     this.col = 0;     this.value = null;     this.previous = null;     this.next = null;     this.previousNode = null;     this.nextNode = null; }
+function Line010() {     this.type = NodeType.Line010;     this.line = 0;     this.col = 0;     this.value = null;     this.previous = null;     this.next = null;     this.previousNode = null;     this.nextNode = null;   }
+function Line010(node) {     RED.nodes.createNode(this, node);     var node1 = this;     this.on('input', function(msg) {       node1.status({fill: 'red', shape: 'dot', text: msg.message});     });   }
+function Line010(node) {     RED.nodes.createNode(this, node);     var node1 = this;     this.status({});     this.on('input', function(msg) {       node1.status({fill: 'red', shape: 'dot', text: msg});     });   }
+function Line010(node) {     RED.nodes.createNode(this, node);     var node1 = this;     this.on('input', function(msg) {       node1.send(msg);     });     this.on('close', function(msg) {       node1.send(msg);     });   }
+function Line010() {   this.type = NodeType.Line010;   this.line = 0;   this.col = 0;   this.value = null;   this.previous = null;   this.next = null;   this.previousToken = null;   this.nextToken = null;   this.col = 0; }
+function Line010() {   this.type = NodeType.Line010;   this.line = 0;   this.col = 0;   this.value = null;   this.previous = null;   this.next = null;   this.previousToken = null;   this.nextToken = null;   this.comments = []; }

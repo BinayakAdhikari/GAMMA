@@ -1,0 +1,25 @@
+
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			this.push(arr[i]); 		} 	}
+function() { 		var arr = []; 		for (var i = 0; i < arguments.length; i++) { 			arr.push(arguments[i]); 		} 		return arr; 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			arr[i] = arr[i].trim(); 		} 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (!arr[i].isEmpty()) { 				arr.splice(i, 1); 			} 		} 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			arr[i] = arr[i].trim(); 		} 		return arr; 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (!arr[i]) { 				arr.splice(i, 1); 			} 		} 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			this.push(arr[i]); 		} 		return this; 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i] !== undefined) { 				this.push(arr[i]); 			} 		} 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i] != null) { 				this.push(arr[i]); 			} 		} 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (!arr[i].trim()) { 				arr[i] = ''; 			} 		} 		return arr; 	}
+function() { 		var arr = []; 		for (var i = 0; i < arguments.length; i++) { 			arr.push(arguments[i]); 		} 		return arr.join(', '); 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (!arr[i].trim()) { 				arr[i] = ""; 			} 		} 		return arr; 	}
+function() { 		var arr = []; 		for (var i = 0; i < arguments.length; i++) { 			arr.push(arguments[i]); 		} 		return arr.join(", "); 	}
+function() { 		var arr = []; 		for (var i = 0; i < arguments.length; i++) { 			arr.push(arguments[i]); 		} 		return arr.join(""); 	}
+function() { 		var arr = []; 		for (var i = 0; i < arguments.length; i++) { 			arr.push(arguments[i]); 		} 		return arr.join(''); 	}
+function() { 		var arr = []; 		for (var i = 0; i < arguments.length; i++) { 			arr.push(arguments[i]); 		} 		return arr.join('\n'); 	}
+function() { 		var arr = []; 		for (var i = 0; i < arguments.length; i++) { 			arr.push(arguments[i]); 		} 		return arr.join("\n"); 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (!arr[i].isEmpty()) { 				arr.splice(i, 1); 			} 		} 		return arr; 	}
+function() { 		var arr = []; 		for (var i = 0; i < arguments.length; i++) { 			arr.push(arguments[i]); 		} 		return arr; 		}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (!arr[i]) { 				arr.splice(i, 1); 			} 		} 		return arr; 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (!arr[i].isEmpty()) { 				arr.splice(i, 1); 				break; 			} 		} 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i] != null) { 				arr[i] = arr[i].trim(); 			} 		} 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i] !== undefined) { 				arr[i] = arr[i].trim(); 			} 		} 	}
+function(arr) { 		for (var i = 0; i < arr.length; i++) { 			if (arr[i] !== undefined) { 				this.push(arr[i]); 			} 		} 		return this; 	}

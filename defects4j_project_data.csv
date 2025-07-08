@@ -1,0 +1,7 @@
+Project,Total_Bugs,TBar_Reported,Gamma_Reported,Gamma_Reproduced,NTR_Reported,NTR_Reproduced
+Chart,26,11,11,10,14,13
+Closure,133,16,24,23,40,38
+Lang,65,13,16,15,29,27
+Math,106,22,25,24,39,36
+Mockito,38,3,3,3,12,11
+Time,27,3,5,4,7,5

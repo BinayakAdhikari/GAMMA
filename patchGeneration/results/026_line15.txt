@@ -1,0 +1,25 @@
+
+function Line014(data) {   if (!(this instanceof Line014))     return new Line014(data);   this.total = 0;   this.data = data; }
+function Line014(data) {   if (!(this instanceof Line014))     return new Line014(data);   Emitter.call(this);   this.data = data; }
+function Line014(data) {   if (!(this instanceof Line014))     return new Line014(data);   Emitter.call(this);   this.total = 0;   this.data = data; }
+function Line014(data) {   if (!(this instanceof Line014))     return new Line014(data);   Emitter.call(this);   this.type = 'Line014';   this.data = data; }
+function Line014(data) {   if (!(this instanceof Line014)) {     return new Line014(data);   }   Emitter.call(this);   this.data = data; }
+function Line014(data) {   if (!(this instanceof Line014)) return new Line014(data);   Emitter.call(this);   this.total = 0;   this.data = data; }
+function Line014(data) {   if (!(this instanceof Line014)) {     return new Line014(data);   }   this.total = 0;   this.data = data; }
+function Line014(data) {   if (!(this instanceof Line014))     return new Line014(data);   Emitter.call(this);   this.data = data;   this.total = 0; }
+function Line014(data) {   if (!(this instanceof Line014)) {     return new Line014(data);   }   Emitter.call(this);   this.total = 0;   this.data = data; }
+function Line014(data) {   if (!(this instanceof Line014)) return new Line014(data);   Emitter.call(this);   this.data = data;   this.total = 0; }
+function Line014(data) {   if (!(this instanceof Line014)) {     return new Line014(data);   }   Emitter.call(this);   this.data = data;   this.total = 0; }
+function Line014(data) {   if (!(this instanceof Line014))     return new Line014(data);   Emitter.call(this);   this.type = 'Line014';   this.data = data;   this.total = 0; }
+@Override     protected void _predict(DoubleSolution solution) {         double total = 0.0;         for (int i = 0; i < solution.getNumberOfVariables(); i++) {             total += solution.getVariableValue(i);         }         solution.setObjective(0.0, total);     }
+@Override     protected void _predict(DoubleSolution solution) {         double total = 0;         for (int i = 0; i < solution.getNumberOfVariables(); i++) {             total += solution.getVariableValue(i);         }         solution.setObjective(0, total);     }
+@Override     protected void _predict(DoubleSolution solution) {         double total = 0;         for (int i = 0; i < solution.getNumberOfVariables(); i++) {             total += solution.getVariableValue(i);         }         for (int i = 0; i < solution.getNumberOfVariables(); i++) {             solution.setObjective(i, total);         }     }
+function (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z}
+@Override     protected void _predict(DoubleSolution solution) {         double total = 0.0;         for (int i = 0; i < solution.getNumberOfVariables(); i++) {             total += solution.getVariableValue(i);         }         total /= solution.getNumberOfVariables();         for (int i = 0; i < solution.getNumberOfVariables(); i++) {             solution.setObjective(i, total);         }     }
+function (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, p, q, r, s, t, u, v, w, x, y, z, p, q, r, s, t, u, v, w, x, y, z, p, q, r, s, t, u, v, w, x, y, z, p, q, r, s
+function (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, m, n, o, p, q, r, s, t, u, v, w, x, y, z, m, n, o, p, q, r, s, t, u, v, w, x, y, z, m, n, o, p, q, r, s, t, u
+function (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, A, B, C, D, E, F, G, H, I, J, K
+function (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, x, y, z, A, B, C, D, E, F, G, H, I, J, K
+function (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, p, q, r, s, t, u, v, w, x, y, z, p, q, r, s, t, u, v, w, x, y, z, p, r, s, t, u, v, w, x, y, z, p, r, s, t, u
+function (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, R, S, T, U, V, W, X, Y, Z, A, B, C, D, E, F, G, H, I, J, K, L
+function (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, p, q, r, s, t, u, v, w, x, y, z, p, r, s, t, u, v, w, x, y, z, p, r, s, t, u, v, w, x, y, z, p, r, s, t, u, v

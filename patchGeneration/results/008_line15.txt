@@ -1,0 +1,25 @@
+
+def __getitem__(self, key):         if key in self.__dict__:             return self.__dict__[key]         return super(ArrayList, self).__getitem__(key)
+def __getitem__(self, key):         if key in self.__dict__:             return self.__dict__[key]         else:             return super(ArrayList, self).__getitem__(key)
+def __getitem__(self, key):         if key in self.__dict__:             return self.__dict__[key]         else:             raise KeyError(key)
+function(arr) { 		if (arr) { 			for (var i = 0; i < arr.length; i++) { 				this.push(arr[i]); 			} 		} 	}
+def __getitem__(self, key):         if key in self.__dict__:             return self.__dict__[key]         else:             return self.__dict__[key]
+function(a, b) { 		if (a.length !== b.length) { 			return false; 		} 		for (var i = 0; i < a.length; i++) { 			if (a[i] !== b[i]) { 				return false; 			} 		} 		return true; 	}
+function(a, b) { 		if (a.length != b.length) { 			return false; 		} 		for (var i = 0; i < a.length; i++) { 			if (a[i] != b[i]) { 				return false; 			} 		} 		return true; 	}
+function(a) { 		if (a instanceof Array) { 			for (var i = 0; i < a.length; i++) { 				this.push(a[i]); 			} 		} else { 			this.push(a); 		} 	}
+function(a, b) { 		if (a.length != b.length) { 			return false; 		} 		for (var i = 0; i < a.length; i++) { 			if (a[i] !== b[i]) { 				return false; 			} 		} 		return true; 	}
+function(a, b) { 		if (a.length !== b.length) { 			return false; 		} 		for (var i = 0; i < a.length; i++) { 			if (b[i] !== a[i]) { 				return false; 			} 		} 		return true; 	}
+function(a, b) { 		if (a.length !== b.length) { 			return false; 		} 		for (var i = 0; i < a.length; i++) { 			if (a[i] !== b[i]) return false; 		} 		return true; 	}
+function(a, b) { 		if (a.length != b.length) { 			return false; 		} 		for (var i = 0; i < a.length; i++) { 			if (a[i] != b[i]) return false; 		} 		return true; 	}
+function(a) { 		if (a instanceof Array) { 			for (var i = 0; i < a.length; i++) { 				this.add(a[i]); 			} 		} else { 			this.add(a); 		} 	}
+function(a) { 		if (a instanceof Array) { 			for (var i = 0; i < a.length; i++) { 				this.push(a[i]); 			} 		} 		else { 			this.push(a); 		} 	}
+function(a, b) { 		if (a.length !== b.length) { 			return false; 		} 		for (var i = 0; i < a.length; i++) { 			if (a[i] != b[i]) { 				return false; 			} 		} 		return true; 	}
+function(a, b) { 		if (a.length !== b.length) { 			return false; 		} 		for (var i = 0; i < a.length; i++) { 			if (!(b[i] in a)) { 				return false; 			} 		} 		return true; 	}
+function(a, b) { 		if (a.length != b.length) { 			return false; 		} 		for (var i = 0; i < a.length; i++) { 			if (!(b[i] in a)) { 				return false; 			} 		} 		return true; 	}
+function(a, b) { 		if (a.length !== b.length) { 			return false; 		} 		for (var i = 0; i < a.length; ++i) { 			if (a[i] !== b[i]) return false; 		} 		return true; 	}
+function(a) { 		if (a instanceof Array) { 			for (var i = 0; i < a.length; i++) { 				this.add(a[i]); 			} 		} 		else { 			this.add(a); 		} 	}
+function(a, b) { 		if (a.length != b.length) { 			return false; 		} 		for (var i = 0; i < a.length; i++) { 			if (a[i] != b[i]) 				return false; 		} 		return true; 	}
+function(a, b) { 		if (a.length !== b.length) { 			return false; 		} 		for (var i = 0; i < a.length; i++) { 			if (!(b[i] instanceof Array)) { 				return false; 			} 		} 		return true; 	}
+function(a) { 		if (a instanceof Array) { 			for (var i = 0; i < a.length; i++) { 				this.push(a[i]); 			} 		} 		else { 			this.push(a); 		} 		return this; 	}
+function(a, b) { 		if (a.length !== b.length) { 			return false; 		} 		for (var i = 0; i < a.length; i++) { 			if (a[i] !== b[i]) { 				return false; 			} 		} 		return true;   	}
+function(a, b) { 		if (a.length !== b.length) { 			return false; 		} 		for (var i = 0; i < a.length; i++) { 			if (a[i] !== b[i]) { 				return false; 			} 		} 	}

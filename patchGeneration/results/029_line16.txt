@@ -1,0 +1,25 @@
+
+function yy_r113(){ $this->_retvalue = $this->yystack[$this->yyidx + -1]->minor;     }
+def p_prevnode(self, p):         p[0] = Node(p[1], lineno=p.lineno(1))         p.set_lineno(0, p.lineno(1))
+function yy_r113(){ $this->_retvalue = yy('Assign', $this->yystack[$this->yyidx + -1]->minor, $this->yystack[$this->yyidx + 0]->minor);     }
+function yy_r113(){ $this->_retvalue = $this->yystack[$this->yyidx + -2]->minor;     }
+function yy_r113(){ $this->_retvalue = new Stmt\Expr('prevnode', $this->yystack[$this->yyidx + -1]->minor);     }
+function yy_r113(){ $this->_retvalue = yy('Assign', $this->yystack[$this->yyidx + -2]->minor, $this->yystack[$this->yyidx + 0]->minor);     }
+def p_prevnode(self, p):         p[0] = p[1]         p[0].setpos(p)
+function yy_r113(){ $this->_retvalue = new Stmt\Expr('prevnode', $this->yystack[$this->yyidx + 0]->minor);     }
+function yy_r113(){ $this->_retvalue = new Stmt\Expr('prevnode', $this->yystack[$this->yyidx + -2]->minor);     }
+def p_prevnode(self, p):         p[0] = Node(p[1], lineno=p.lineno(1))
+function yy_r113(){ $this->_retvalue = yy('Assign', $this->yystack[$this->yyidx + 0]->minor, $this->yystack[$this->yyidx + -1]->minor);     }
+def p_prevnode(self, p):         if p[1] is None:             p[0] = None         else:             p[0] = p[1]
+def p_prevnode(self, p):         p[0] = Node(p[1], p[3], lineno=p.lineno(1))
+function yy_r113(){ $this->_retvalue = yy('Assign', $this->yystack[$this->yyidx + -1]->minor, NULL, $this->yystack[$this->yyidx + 0]->minor);     }
+def p_prevnode(self, p):         if p[2] is None:             p[0] = None         else:             p[0] = p[2]
+def p_prevnode(self, p):         prevnode = p[1]         p[0] = Node(prevnode, lineno=p.lineno(1))
+function yy_r113(){ $this->_retvalue = yy('Assign', $this->yystack[$this->yyidx + 0]->minor, $this->yystack[$this->yyidx + 0]->minor);     }
+def p_prevnode(self, p):         if len(p) == 2:             p[0] = p[1]         else:             p[0] = None
+def p_prevnode(self, p):         if len(p) == 2:             p[0] = p[1]         else:             p[0] = p[1]
+def p_prevnode(self, p):         if p[1] is not None:             p[0] = p[1]         else:             p[0] = None
+def p_prevnode(self, p):         prevnode = p[1]         if prevnode is not None:             p[0] = prevnode
+def p_prevnode(self, p):         if len(p) == 2:             p[0] = prevnode(p[1])         else:             p[0] = p[1]
+def p_prevnode(self, p):         if p[1] is None:             p[0] = None         else:             p[0] = Node(p[1], p[3])
+def p_prevnode(self, p):         p[0] = Node(p[1], lineno=p.lineno(1))         p.set_lineno(0, p.lineno(1))         return

@@ -1,0 +1,25 @@
+private void heapify() {         for (int i = 0; i < size; i++) {             if (heap[i] == null) {                 heap[i] = i;             }         }     }
+private void heapify() {         for (int i = 0; i < size; i++) {             if (heap[i] == null) heap[i] = i;         }     }
+private void heapify() { 		for (int i = 0; i < size; i++) { 			if (heap[i] == null) { 				heap[i] = i; 			} 		} 	}
+private void heapify() { 		for (int i = 0; i < size; i++) { 			if (heap[i] == null) heap[i] = i; 		} 	}
+private void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         while (!pq.isEmpty()) {             pq.removeFirst();         }     }
+private void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         while (!pq.isEmpty()) {             pq.poll();         }     }
+private void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         while (!pq.isEmpty()) {             pq.remove();         }     }
+private void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         for (int i = 0; i < size; i++) {             pq.add(i);         }         heap = pq;     }
+private void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         while (!pq.isEmpty()) {             pq.remove(0);         }     }
+private static void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         pq.add(0);         pq.add(1);         pq.add(2);         pq.add(3);         pq.add(4);         pq.add(5);         pq.add(6);         pq.add(7);     }
+private void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         while (!pq.isEmpty()) {             Integer q = pq.remove();             pq.add(q);         }     }
+private void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         while (!pq.isEmpty()) {             Integer q = pq.poll();             pq.add(q);         }     }
+private void heapify() {         for (int i = 0; i < size; i++) {             if (heap[i] == null) {                 heap[i] = new PriorityQueue<Integer>();             }             heap[i].add(i);         }     }
+private void heapify() {         PriorityQueue<Integer> q = new PriorityQueue<Integer>();         for (int i = 0; i < size; i++) {             q.add(i);         }         heap = q;     }
+private static void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         pq.add(0);         pq.add(1);         pq.add(2);         pq.add(3);         pq.add(4);         pq.add(5);         pq.add(6);         pq.add(7);         pq.add(8);         pq.add(9);     }
+private void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         while (!pq.isEmpty()) {             pq.removeFirst();             heap.add(pq.getFirst());         }     }
+private static void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         pq.add(0);         pq.add(1);         pq.add(2);         pq.add(3);         pq.add(4);         pq.add(5);         pq.add(6);         pq.add(7);         pq.add(8);     }
+private static void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         pq.add(0);         pq.add(1);         pq.add(2);         pq.add(3);         pq.add(4);         pq.add(5);         pq.add(6);     }
+private static void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         pq.add(0);         pq.add(1);         pq.add(2);         pq.add(3);         pq.add(4);         pq.add(5);     }
+private void heapify() {         for (int i = 0; i < size; i++) {             if (heap[i] == null) heap[i] = new PriorityQueue<Integer>();             heap[i].add(i);         }     }
+private void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         pq.add(0);         pq.add(1);         pq.add(2);         pq.add(3);         pq.add(4);         pq.add(5);         pq.add(6);         pq.add(7);     }
+private void heapify() { 		for (int i = 0; i < size; i++) { 			if (heap[i] == null) { 				heap[i] = new PriorityQueue<Integer>(); 			} 			heap[i].add(i); 		} 	}
+private void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         pq.add(0);         pq.add(1);         pq.add(2);         pq.add(3);         pq.add(4);         pq.add(5);         pq.add(6);         pq.add(7);         pq.add(8);     }
+private void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         pq.add(0);         pq.add(1);         pq.add(2);         pq.add(3);         pq.add(4);         pq.add(5);         pq.add(6);         pq.add(7);         pq.add(8);         pq.add(9);     }
+private void heapify() {         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();         for (int i = 0; i < size; i++) {             pq.add(i);         }         pq.sort();     }

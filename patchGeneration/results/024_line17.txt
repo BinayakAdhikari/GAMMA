@@ -1,0 +1,25 @@
+public void permute(int[] perm) {         for (int i = 0; i < perm.length; i++) {             perm[i] = perm[i + 1];         }     }
+public void permute(int[] perm) {         for (int i = 0; i < perm.length; i++) {             perm[i] = perm[i+1];         }     }
+private void line016() {         for (int i = 0; i < line016.length; i++) {             line016[i] = line016[i].substring(1);         }     }
+private void line016() {         for (int j = 0; j < line016.length; j++) {             line016[j] = line016[j] + 1;         }     }
+private void line016() {         for (int i = 0; i < line016.length; i++) {             line016[i] = line016[i + 1];         }     }
+public void permute(int[] perm) {         for (int i = 0; i < perm.length; i++) {             perm[i] = perm[i-1];         }     }
+private void line016() {         for (int i = 0; i < line016.length; i++) {             line016[i] = line016[i] + " ";         }     }
+public void permute(int[] perm) {         for (int i = 0; i < perm.length; i++) {             perm[i] = perm[i - 1];         }     }
+public void permute(int[] perm) {         for (int i = 0; i < perm.length; i++) {             perm[i] = perm[i] | perm[i + 1];         }     }
+private void line016() {         for (int j = 0; j < line016.length; j++) {             line016[j] = line016[j] + " ";         }     }
+private void line016() {         for (int j = 0; j < line016.length; j++) {             line016[j] = line016[j] + line016[j + 1];         }     }
+private void line016() {         for (int i = 0; i < line016.length; i++) {             line016[i] = line016[i].charAt(0);         }     }
+private void line016() {         for (int i = 0; i < line016.length; i++) {             line016[i] = line016[i].substring(0, line016[i].length() - 1);         }     }
+private void line016() {         for (int j = 0; j < line016.length; j++) {             line016[j] = line016[j].substring(0, line016[j].length() - 1);         }     }
+public void permute(int[] perm) {         for (int i = 0; i < perm.length; i++) {             perm[i] = perm[i + 1];             perm[i + 1] = perm[i];         }     }
+private void line016() {         for (int i = 0; i < line016.length; i++) {             line016[i] = line016[i].substring(0, line016[i].length() - 2);         }     }
+private void line016() {         for (int j = 0; j < line016.length; j++) {             line016[j] = line016[j].substring(0, line016[j].length() - 2);         }     }
+public void permute(int[] perm) {         for (int i = 0; i < perm.length; i++) {             if (perm[i] == 0) {                 perm[i] = 1;             }         }     }
+public void permute(int[] perm) {         for (int i = 0; i < perm.length; i++) {             if (perm[i] < 0) {                 perm[i] = -perm[i];             }         }     }
+private void line016() {         for (int i = 0; i < line016.length; i++) {             line016[i] = line016[i].substring(0, line016[i].length()-1);         }     }
+private void line016() {         for (int j = 0; j < line016.length; j++) {             line016[j] = line016[j].substring(0, line016[j].length()-1);         }     }
+private void line016() {         for (int j = 0; j < line016.length; j++) {             line016[j] = line016[j] + line016[j + 1] + line016[j + 2];         }     }
+public void permute(int[] perm) {         for (int i = 0; i < perm.length; i++) {             if (perm[i] > 0) {                 perm[i] -= 1;             }         }     }
+public void permute(int[] perm) {         for (int i = 0; i < perm.length; i++) {             if (perm[i] < 0) {                 perm[i] = 0;             }         }     }
+private void line016() {         for (int i = 0; i < line016.length; i++) {             line016[i] = line016[i].substring(0, line016[i].length() - 1);         }         line016 = null;     }

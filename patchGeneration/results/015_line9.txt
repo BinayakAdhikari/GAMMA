@@ -1,0 +1,25 @@
+
+private static int findPivot(int[] arr, int pivot) {         for (int i = 1; i < arr.length; i++) {             if (arr[i] == pivot) {                 return i;             }         }         return -1;     }
+private int findPivot(int[] arr, int pivot) {         for (int i = 1; i < arr.length; i++) {             if (arr[i] == pivot) {                 return i;             }         }         return -1;     }
+private int findPivot(int[] arr) {         int pivot = 0;         for (int i = 1; i < arr.length; i++) {             if (arr[i] == pivot) {                 pivot = i;             }         }         return pivot;     }
+private int findPivot(int[] arr) {         for (int i = 1; i < arr.length; i++) {             if (arr[i] == pivot) {                 return i;             }         }         return -1;     }
+private static int findPivot(int[] arr, int pivot) {         for (int i = 0; i < arr.length; i++) {             if (arr[i] == pivot) {                 return i;             }         }         return -1;     }
+private static int findPivot(int[] arr, int pivot) {         for (int i = 1; i < arr.length; i++) {             if (arr[i] == pivot) {                 return i;             }         }         return pivot;     }
+private int findPivot(int[] arr, int pivot) {         for (int i = 1; i < arr.length; i++) {             if (arr[i] == pivot) {                 return i;             }         }         return pivot;     }
+private int findPivot(int[] arr, int pivot) {         for (int i = 0; i < arr.length; i++) {             if (arr[i] == pivot) {                 return i;             }         }         return -1;     }
+private int getPivot(int[] arr) {         int pivot = 0;         for (int i = 1; i < arr.length; i++) {             if (arr[i] == pivot) {                 pivot = i;             }         }         return pivot;     }
+private int findPivot(int[] arr) {         for (int i = 1; i < arr.length; i++) {             if (arr[i] < pivot) {                 pivot = arr[i];             }         }         return pivot;     }
+private int findPivot(int[] arr) {         int pivot = 0;         for (int i = 0; i < arr.length; i++) {             if (arr[i] == pivot) {                 pivot = i;             }         }         return pivot;     }
+private int findPivot(int[] arr) {         for (int i = 0; i < arr.length; i++) {             if (arr[i] == pivot) {                 return i;             }         }         return -1;     }
+private int getPivot(int[] arr) {         int pivot = 0;         for (int i = 1; i < arr.length; i++) {             if (arr[i] < pivot) {                 pivot = arr[i];             }         }         return pivot;     }
+private int findPivot(int[] arr) {         int pivot = 0;         for (int i = 1; i < arr.length; i++) {             if (arr[i] < pivot) {                 pivot = arr[i];             }         }         return pivot;     }
+private int findPivot(int[] arr, int pivot) { 		for (int i = 1; i < arr.length; i++) { 			if (arr[i] == pivot) { 				return i; 			} 		} 		return -1; 	}
+private static int findPivot(int[] arr, int pivot) {         for (int i = 1; i < arr.length; i++) {             if (arr[i] == pivot) {                 return i;             }         }         return 0;     }
+private static int findPivot(int[] arr, int pivot) {         for (int i = 1; i < arr.length; i++) {             if (arr[i] < pivot) {                 return i;             }         }         return pivot;     }
+private int findPivot(int[] arr, int pivot) {         for (int i = 1; i < arr.length; i++) {             if (arr[i] < pivot) {                 return i;             }         }         return pivot;     }
+private int findPivot(int[] arr) {         int pivot = arr[0];         for (int i = 1; i < arr.length; i++) {             if (arr[i] == pivot) {                 pivot = i;             }         }         return pivot;     }
+private static int findPivot(int[] arr, int pivot) { 		for (int i = 1; i < arr.length; i++) { 			if (arr[i] == pivot) { 				return i; 			} 		} 		return pivot; 	}
+private static int findPivot(int[] arr, int pivot) {         for (int i = 0; i < arr.length; i++) {             if (arr[i] == pivot) {                 return i;             }         }         return pivot;     }
+private int findPivot(int[] arr, int pivot) { 		for (int i = 1; i < arr.length; i++) { 			if (arr[i] == pivot) { 				return i; 			} 		} 		return pivot; 	}
+private static int findPivot(int[] arr, int pivot) {         for (int i = 1; i < arr.length; ++i) {             if (arr[i] == pivot) {                 return i;             }         }         return -1;     }
+private static int findPivot(int[] arr, int pivot) { 		for (int i = 1; i < arr.length; i++) { 			if (arr[i] < pivot) { 				return i; 			} 		} 		return pivot; 	}

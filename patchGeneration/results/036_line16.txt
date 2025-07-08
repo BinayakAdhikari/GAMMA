@@ -1,0 +1,25 @@
+
+function Line(x, y) {   this.x = x;   this.y = y;   this.approx = approx; }
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.approx = approx; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.x2 = x; 		this.y2 = y; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.x0 = x; 		this.y0 = y; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.x1 = x; 		this.y1 = y; 		this.x2 = x; 		this.y2 = y; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.x1 = x; 		this.y1 = y; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.x0 = this.x; 		this.y0 = this.y; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.a = 0; 		this.b = 0; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.a = 0; 		this.b = 0; 		this.c = 0; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.a = 0; 		this.b = 0; 		this.c = 0; 		this.d = 0; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.x0 = x; 		this.y0 = y; 		this.x1 = x; 		this.y1 = y; 	}
+function Line() { 		this.x = 0; 		this.y = 0; 		this.z = 0; 		this.a = 0; 		this.b = 0; 		this.c = 0; 		this.d = 0; 		this.e = 0; 		this.f = 0; 	}
+function Line() { 		this.x = 0; 		this.y = 0; 		this.z = 0; 		this.a = 0; 		this.b = 0; 		this.c = 0; 		this.d = 0; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.a = 0; 		this.b = 0; 		this.c = 0; 		this.d = 0; 		this.e = 0; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.a = 0; 		this.b = 0; 		this.c = 0; 		this.d = 0; 		this.e = 0; 		this.f = 0; 	}
+function Line() { 		this.x = 0; 		this.y = 0; 		this.z = 0; 		this.a = 0; 		this.b = 0; 		this.c = 0; 		this.d = 0; 		this.e = 0; 		this.f = 0; 		this.g = 0; 		this.h = 0; 	}
+function Line() { 		this.x = 0; 		this.y = 0; 		this.z = 0; 		this.a = 0; 		this.b = 0; 		this.c = 0; 		this.d = 0; 		this.e = 0; 	}
+function Line() { 		this.x = 0; 		this.y = 0; 		this.z = 0; 		this.a = 0; 		this.b = 0; 		this.c = 0; 		this.d = 0; 		this.e = 0; 		this.f = 0; 		this.g = 0; 		this.h = 0; 		this.i = 0; 	}
+function Line() { 		this.x = 0; 		this.y = 0; 		this.z = 0; 		this.a = 0; 		this.b = 0; 		this.c = 0; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.a = 0; 		this.b = 0; 		this.c = 0; 		this.d = 0; 		this.e = 0; 		this.f = 0; 		this.g = 0; 		this.h = 0; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.x1 = x; 		this.y1 = y; 		this.x2 = x; 		this.y2 = y; 		this.x3 = x; 		this.y3 = y; 	}
+function Line() { 		this.x = 0; 		this.y = 0; 		this.z = 0; 		this.a = 0; 		this.b = 0; 		this.c = 0; 		this.d = 0; 		this.e = 0; 		this.f = 0; 		this.g = 0; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.x0 = x; 		this.y0 = y; 		this.x1 = x; 		this.y1 = y; 		this.x2 = x; 		this.y2 = y; 	}
+function Line(x, y) { 		this.x = x; 		this.y = y; 		this.x1 = x; 		this.y1 = y; 		this.x2 = x + 1; 		this.y2 = y + 1; 	}

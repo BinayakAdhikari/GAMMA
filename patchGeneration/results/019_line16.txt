@@ -1,0 +1,25 @@
+
+function isEmpty(a, b) { 		return a.length === 0 && b.length === 0; 	}
+function isEmpty(a, b) {     return a.length === 0 && b.length === 0; }
+function isEmpty(a, b) {   return a.length === 0 && b.length === 0; }
+function isEmpty(a, b) {     return a.length === 0 && b.length === 0;   }
+function isEmpty(a, b) { 		return a.length === b.length && a[0] === b[0]; 	}
+function isEmpty(a, b) {   return a.length === b.length && a[0] === b[0]; }
+function isEmpty(a, b) {     return a.length === b.length && a[0] === b[0]; }
+function isEmpty(a, b) {     return a.length === b.length && a[0] === b[0];   }
+function isEmpty(a, b) {   if (a.length === 0 && b.length === 0) {     return true;   }   return false; }
+function isEmpty(a, b) {     if (a.length === 0 && b.length === 0) {         return true;     }     return false; }
+function isEmpty(a, b) {     if (a.length === 0 && b.length === 0) {       return true;     }     return false;   }
+function isEmpty(a, b) {   if (a.length === 0 && b.length === 0) {     return true;   }   if (a.length > b.length) {     return false;   }   return true; }
+function isEmpty(a, b) {   if (a === b) {     return true;   }   if (a === null) {     return false;   }   if (b === null) {     return true;   }   return false; }
+function isEmpty(a, b) {     if (a.isEmpty() && b.isEmpty()) {         return true;     } else if (a.isEmpty() && b.isEmpty()) {         return false;     } else if (a.isEmpty() && b.isEmpty()) {         return true;     }     return false; }
+function isEmpty(a, b) {     if (a.isEmpty() && b.isEmpty()) {         return true;     } else if (a.isEmpty() && b.isEmpty()) {         return false;     } else if (a.isEmpty() && b.isEmpty()) {         return true;     } else {         return false;     } }
+function isEmpty(a, b) { 		if (a === b) { 			return true; 		} 		if (a === null) { 			return false; 		} 		if (b === null) { 			return true; 		} 		return false; 	}
+function isEmpty(a, b) {     if (a.isEmpty() && b.isEmpty()) {         return true;     }     if (a.isEmpty() && b.isEmpty()) {         return false;     }     if (a.isEmpty() && b.isEmpty()) {         return true;     }     return false; }
+function isEmpty(a, b) {     if (a.isEmpty() && b.isEmpty()) {       return true;     }     if (a.isEmpty() && b.isEmpty()) {       return false;     }     if (a.isEmpty() && b.isEmpty()) {       return true;     }     return false;   }
+function isEmpty(a, b) {   if (a.length === 0 && b.length === 0) {     return true;   }   if (a.length > b.length) {     return false;   }   if (a.length < b.length) {     return true;   }   return false; }
+function isEmpty(a, b) {   if (a.length === 0 && b.length === 0) {     return true;   } else if (a.length > b.length) {     return false;   } else if (a.length === b.length) {     return true;   } else {     return false;   } }
+function isEmpty(a, b) {   if (a.length === 0 && b.length === 0) {     return true;   }   if (a.length > b.length) {     return false;   }   if (a.length === b.length) {     return true;   }   return false; }
+function isEmpty(a, b) {     if (a.isEmpty() && b.isEmpty()) {         return true;     } else if (a.isEmpty() && b.isEmpty()) {         return false;     } else if (a.isEmpty() && b.isEmpty()) {         return true;     } else if (a.isEmpty() && b.isEmpty()) {         return false;     }     return false; }
+function isEmpty(a, b) { 		if (a === b) { 			return true; 		} 		if (a === null || b === null) { 			return false; 		} 		if (a === undefined || b === undefined) { 			return true; 		} 		return false; 	}
+function isEmpty(a, b) { 		if (a === b) { 			return true; 		} 		if (a === undefined || b === undefined) { 			return false; 		} 		if (a === null || b === null) { 			return true; 		} 		return false; 	}

@@ -1,0 +1,1138 @@
+line:15
+    public static int knapsack(int capacity, int [][] items) {
+        int memo[][] = new int[n + 1][capacity + 1];
+        for (int i = 0; i <= n ; i++)
+        {
+            if (i - 1 >= 0) {
+                weight = items[i - 1][0];
+                value = items[i - 1][1];
+            }
+            for (int j = 0; j <= capacity; j++)
+            {
+                if (i == 0 || j == 0) {
+                    memo[i][j] = 0;
+                }
+                else if (weight < j) {
+                    memo[i][j] = Math.max(memo[i - 1][j], value + memo[i - 1][j - weight]);
+                }
+                else {
+                    memo[i][j] = memo [i-1][j];
+                }
+            }
+        }
+        return memo[n][capacity];
+    }
+}
+
+position:1
+line:15
+    public static String longest_common_subsequence(String a, String b) {
+        } else if (a.charAt(0) == b.charAt(0)) {
+            return a.charAt(0) + longest_common_subsequence(a.substring(1), b);
+        } else {
+            String fst = longest_common_subsequence(a, b.substring(1));
+            String snd = longest_common_subsequence(a.substring(1), b);
+            return fst.length() >= snd.length() ? fst : snd;
+        }
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1; 
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
+line:8
+    public static Integer kth(ArrayList<Integer> arr, int k) {
+        below = new ArrayList<Integer>(arr.size());
+        above = new ArrayList<Integer>(arr.size());
+        for (Integer x : arr) {
+            if (x < pivot) {
+                below.add(x);
+            } else if (x > pivot) {
+                above.add(x);
+            }
+        }
+        int num_less = below.size();
+        int num_lessoreq = arr.size() - above.size();
+        if (k < num_less) {
+            return kth(below, k);
+        } else if (k >= num_lessoreq) {
+            return kth(above, k);
+        } else {
+            return pivot;
+        }
+    }
+}
+
+position:1
+line:8
+    public static Integer kth(ArrayList<Integer> arr, int k) {
+        below = new ArrayList<Integer>(arr.size());
+        above = new ArrayList<Integer>(arr.size());
+        for (Integer x : arr) {
+            if (x < pivot) {
+                below.add(x);
+            } else if (x > pivot) {
+                above.add(x);
+            }
+        }
+        int num_less = below.size();
+        int num_lessoreq = arr.size() - above.size();
+        if (k < num_less) {
+            return kth(below, k);
+        } else if (k >= num_lessoreq) {
+            return kth(above, k);
+        } else {
+            return pivot;
+        }
+    }
+}
+
+position:1
+line:14
+    public static int levenshtein(String source, String target) {
+        } else if (source.charAt(0) == target.charAt(0)) {
+            return 1 + levenshtein(source.substring(1), target.substring(1));
+        } else {
+            return 1 + Math.min(Math.min(
+                    levenshtein(source,              target.substring(1)),
+                    levenshtein(source.substring(1), target.substring(1))),
+                    levenshtein(source.substring(1), target)
+        );
+        }
+    }
+}
+
+position:1
+line:15
+    public static int knapsack(int capacity, int [][] items) {
+        int memo[][] = new int[n + 1][capacity + 1];
+        for (int i = 0; i <= n ; i++)
+        {
+            if (i - 1 >= 0) {
+                weight = items[i - 1][0];
+                value = items[i - 1][1];
+            }
+            for (int j = 0; j <= capacity; j++)
+            {
+                if (i == 0 || j == 0) {
+                    memo[i][j] = 0;
+                }
+                else if (weight < j) {
+                    memo[i][j] = Math.max(memo[i - 1][j], value + memo[i - 1][j - weight]);
+                }
+                else {
+                    memo[i][j] = memo [i-1][j];
+                }
+            }
+        }
+        return memo[n][capacity];
+    }
+}
+
+position:1
+line:8
+    public static Integer kth(ArrayList<Integer> arr, int k) {
+        below = new ArrayList<Integer>(arr.size());
+        above = new ArrayList<Integer>(arr.size());
+        for (Integer x : arr) {
+            if (x < pivot) {
+                below.add(x);
+            } else if (x > pivot) {
+                above.add(x);
+            }
+        }
+        int num_less = below.size();
+        int num_lessoreq = arr.size() - above.size();
+        if (k < num_less) {
+            return kth(below, k);
+        } else if (k >= num_lessoreq) {
+            return kth(above, k);
+        } else {
+            return pivot;
+        }
+    }
+}
+
+position:1
+line:14
+    public static int levenshtein(String source, String target) {
+        } else if (source.charAt(0) == target.charAt(0)) {
+            return 1 + levenshtein(source.substring(1), target.substring(1));
+        } else {
+            return 1 + Math.min(Math.min(
+                    levenshtein(source,              target.substring(1)),
+                    levenshtein(source.substring(1), target.substring(1))),
+                    levenshtein(source.substring(1), target)
+        );
+        }
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1;
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
+line:14
+    public static int levenshtein(String source, String target) {
+        } else if (source.charAt(0) == target.charAt(0)) {
+            return 1 + levenshtein(source.substring(1), target.substring(1));
+        } else {
+            return 1 + Math.min(Math.min(
+                    levenshtein(source,              target.substring(1)),
+                    levenshtein(source.substring(1), target.substring(1))),
+                    levenshtein(source.substring(1), target)
+        );
+        }
+    }
+}
+
+position:1
+line:8
+    public static Integer kth(ArrayList<Integer> arr, int k) {
+        below = new ArrayList<Integer>(arr.size());
+        above = new ArrayList<Integer>(arr.size());
+        for (Integer x : arr) {
+            if (x < pivot) {
+                below.add(x);
+            } else if (x > pivot) {
+                above.add(x);
+            }
+        }
+        int num_less = below.size();
+        int num_lessoreq = arr.size() - above.size();
+        if (k < num_less) {
+            return kth(below, k);
+        } else if (k >= num_lessoreq) {
+            return kth(above, k);
+        } else {
+            return pivot;
+        }
+    }
+}
+
+position:1
+line:8
+    public static Set<WeightedEdge> minimum_spanning_tree(List<WeightedEdge> weightedEdges) {
+        Collections.sort(weightedEdges);
+        for (WeightedEdge edge : weightedEdges) {
+            Node vertex_u = edge.node1;
+            Node vertex_v = edge.node2;
+            if (!groupByNode.containsKey(vertex_u)){
+                groupByNode.put(vertex_u, new HashSet<>(Arrays.asList(vertex_u)));
+            }
+            if (!groupByNode.containsKey(vertex_v)){
+                groupByNode.put(vertex_v, new HashSet<>(Arrays.asList(vertex_v)));
+            }
+            if (groupByNode.get(vertex_u) != groupByNode.get(vertex_v)) {
+                minSpanningTree.add(edge);
+                groupByNode = update(groupByNode, vertex_u, vertex_v);
+                for (Node node : groupByNode.get(vertex_v)) {
+                    groupByNode = update(groupByNode, node, vertex_u);
+                }
+            }
+        }
+        return minSpanningTree;
+    }
+    public static Map<Node,Set<Node>> update(Map<Node,Set<Node>> groupByNode, Node vertex_u, Node vertex_v) {
+        Set<Node> vertex_u_span = groupByNode.get(vertex_u);
+        vertex_u_span.addAll(groupByNode.get(vertex_v));
+        return groupByNode;
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1;
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
+line:16
+    public static int gcd(int a, int b) {
+        } else {
+            return gcd(a % b, b);
+        }
+    }
+}
+
+position:1
+line:14
+    public static int lis(int[] arr) {
+        int i = 0;
+        for (int val : arr) {
+            ArrayList<Integer> prefix_lengths = new ArrayList<Integer>(100);
+            for (int j=1; j < longest+1; j++) {
+                if (arr[ends.get(j)] < val) {
+                    prefix_lengths.add(j);
+                }
+            }
+            int length = !prefix_lengths.isEmpty() ? Collections.max(prefix_lengths) : 0;
+            if (length == longest || val < arr[ends.get(length+1)]) {
+                ends.put(length+1, i);
+                longest = length + 1;
+            }
+            i++;
+        }
+        return longest;
+    }
+}
+
+position:1
+line:8
+    public static Integer kth(ArrayList<Integer> arr, int k) {
+        below = new ArrayList<Integer>(arr.size());
+        above = new ArrayList<Integer>(arr.size());
+        for (Integer x : arr) {
+            if (x < pivot) {
+                below.add(x);
+            } else if (x > pivot) {
+                above.add(x);
+            }
+        }
+        int num_less = below.size();
+        int num_lessoreq = arr.size() - above.size();
+        if (k < num_less) {
+            return kth(below, k);
+        } else if (k >= num_lessoreq) {
+            return kth(above, k);
+        } else {
+            return pivot;
+        }
+    }
+}
+
+position:1
+line:8
+    public static Integer kth(ArrayList<Integer> arr, int k) {
+        below = new ArrayList<Integer>(arr.size());
+        above = new ArrayList<Integer>(arr.size());
+        for (Integer x : arr) {
+            if (x < pivot) {
+                below.add(x);
+            } else if (x > pivot) {
+                above.add(x);
+            }
+        }
+        int num_less = below.size();
+        int num_lessoreq = arr.size() - above.size();
+        if (k < num_less) {
+            return kth(below, k);
+        } else if (k >= num_lessoreq) {
+            return kth(above, k);
+        } else {
+            return pivot;
+        }
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1;
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1;
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
+line:20
+    public static ArrayList<Integer> merge(ArrayList<Integer> left, ArrayList<Integer> right) {
+        int j = 0;
+        while (i < left.size() && j < right.size()) {
+            if (left.get(i) <= right.get(j)) {
+                result.add(left.get(i));
+                i++;
+            } else {
+                result.add(right.get(j));
+                j++;
+            }
+        }
+        result.addAll(left.subList(i,left.size()).isEmpty() ? right.subList(j, right.size()) : left.subList(i, left.size()));
+        return result;
+    }
+    public static ArrayList<Integer> mergesort(ArrayList<Integer> arr) {
+        if (arr.size() == 0) { // <= 1 in correct version
+            return arr;
+        } else {
+            int middle = arr.size() / 2;
+            ArrayList<Integer> left = new ArrayList<Integer>(100);
+            left.addAll(arr.subList(0,middle));
+            left = mergesort(left);
+            ArrayList<Integer> right = new ArrayList<Integer>(100);
+            right.addAll(arr.subList(middle, arr.size()));
+            right = mergesort(right);
+            return merge(left, right);
+        }
+    }
+}
+
+position:1
+line:16
+    public static int gcd(int a, int b) {
+        } else {
+            return gcd(a % b, b);
+        }
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1;
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
+line:14
+    public static int levenshtein(String source, String target) {
+        } else if (source.charAt(0) == target.charAt(0)) {
+            return 1 + levenshtein(source.substring(1), target.substring(1));
+        } else {
+            return 1 + Math.min(Math.min(
+                    levenshtein(source,              target.substring(1)),
+                    levenshtein(source.substring(1), target.substring(1))),
+                    levenshtein(source.substring(1), target)
+        );
+        }
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1;
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
+line:8
+    public static Integer kth(ArrayList<Integer> arr, int k) {
+        below = new ArrayList<Integer>(arr.size());
+        above = new ArrayList<Integer>(arr.size());
+        for (Integer x : arr) {
+            if (x < pivot) {
+                below.add(x);
+            } else if (x > pivot) {
+                above.add(x);
+            }
+        }
+        int num_less = below.size();
+        int num_lessoreq = arr.size() - above.size();
+        if (k < num_less) {
+            return kth(below, k);
+        } else if (k >= num_lessoreq) {
+            return kth(above, k);
+        } else {
+            return pivot;
+        }
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1;
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1;
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1;
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
+line:14
+    public static int levenshtein(String source, String target) {
+        } else if (source.charAt(0) == target.charAt(0)) {
+            return 1 + levenshtein(source.substring(1), target.substring(1));
+        } else {
+            return 1 + Math.min(Math.min(
+                    levenshtein(source,              target.substring(1)),
+                    levenshtein(source.substring(1), target.substring(1))),
+                    levenshtein(source.substring(1), target)
+        );
+        }
+    }
+}
+
+position:1
+line:14
+    public static int lis(int[] arr) {
+        int i = 0;
+        for (int val : arr) {
+            ArrayList<Integer> prefix_lengths = new ArrayList<Integer>(100);
+            for (int j=1; j < longest+1; j++) {
+                if (arr[ends.get(j)] < val) {
+                    prefix_lengths.add(j);
+                }
+            }
+            int length = !prefix_lengths.isEmpty() ? Collections.max(prefix_lengths) : 0;
+            if (length == longest || val < arr[ends.get(length+1)]) {
+                ends.put(length+1, i);
+                longest = length + 1;
+            }
+            i++;
+        }
+        return longest;
+    }
+}
+
+position:1
+line:14
+    public static Boolean is_valid_parenthesization(String parens) {
+            Character paren = parens.charAt(i);
+            if (paren.equals('(')) {
+                depth++;
+            } else {
+                depth--;
+                if (depth < 0) { return false; }
+            }
+        }
+        return true;
+    }
+}
+
+position:1
+line:15
+    public static String longest_common_subsequence(String a, String b) {
+        } else if (a.charAt(0) == b.charAt(0)) {
+            return a.charAt(0) + longest_common_subsequence(a.substring(1), b);
+        } else {
+            String fst = longest_common_subsequence(a, b.substring(1));
+            String snd = longest_common_subsequence(a.substring(1), b);
+            return fst.length() >= snd.length() ? fst : snd;
+        }
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1;
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
+line:14
+    public static int levenshtein(String source, String target) {
+        } else if (source.charAt(0) == target.charAt(0)) {
+            return 1 + levenshtein(source.substring(1), target.substring(1));
+        } else {
+            return 1 + Math.min(Math.min(
+                    levenshtein(source,              target.substring(1)),
+                    levenshtein(source.substring(1), target.substring(1))),
+                    levenshtein(source.substring(1), target)
+        );
+        }
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1;
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1;
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
+line:13
+    public static int binsearch(int[] arr, int x, int start, int end) {
+        }
+        int mid = start + (end - start) / 2; // check this is floor division
+        if (x < arr[mid]) {
+            return binsearch(arr, x, start, mid);
+        } else if (x > arr[mid]) {
+            return binsearch(arr, x, mid, end);
+        } else {
+            return mid;
+        }
+    }
+    public static int find_in_sorted(int[] arr, int x) {
+        return binsearch(arr, x, 0, arr.length);
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1;
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
+line:16
+    public static List<Pair<Integer,Integer>> hanoi(int height, int start, int end) {
+        if (height > 0) {
+            PriorityQueue<Integer> crap_set = new PriorityQueue<Integer>();
+            crap_set.add(1);
+            crap_set.add(2);
+            crap_set.add(3);
+            crap_set.remove(start);
+            crap_set.remove(end);
+            int helper = crap_set.poll();
+            steps.addAll(hanoi(height-1, start, helper));
+            steps.add(new Pair<Integer,Integer>(start, helper));
+            steps.addAll(hanoi(height-1, helper, end));
+        }
+        return steps;
+    }
+    public static class Pair<F, S> {
+        private F first; //first member of pair
+        private S second; //second member of pair
+        public Pair(F first, S second) {
+            this.first = first;
+            this.second = second;
+        }
+        public void setFirst(F first) {
+            this.first = first;
+        }
+        public void setSecond(S second) {
+            this.second = second;
+        }
+        public F getFirst() {
+            return first;
+        }
+        public S getSecond() {
+            return second;
+        }
+        @Override
+        public String toString() {
+            return "(" + String.valueOf(first) + ", " + String.valueOf(second) + ")";
+        }
+    }
+}
+
+position:1
+line:17
+    public static Integer lcs_length(String s, String t) {
+        for (int i=0; i < s.length(); i++) {
+            Map<Integer,Integer> initialize = new HashMap<Integer,Integer>();
+            dp.put(i, initialize);
+            for (int j=0; j < t.length(); j++) {
+                Map<Integer,Integer> internal_map = dp.get(i);
+                internal_map.put(j,0);
+                dp.put(i, internal_map);
+            }
+        }
+        for (int i=0; i < s.length(); i++) {
+            for (int j=0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i-1)) {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        int insert_value = dp.get(i-1).get(j) + 1;
+                        internal_map.put(j, insert_value);
+                        dp.put(i,internal_map);
+                    } else {
+                        Map<Integer, Integer> internal_map = dp.get(i);
+                        internal_map.put(j,1);
+                        dp.put(i,internal_map);
+                    }
+                }
+            }
+        }
+        if (!dp.isEmpty()) {
+            List<Integer> ret_list = new ArrayList<Integer>();
+            for (int i=0; i<s.length(); i++) {
+                ret_list.add(!dp.get(i).isEmpty() ? Collections.max(dp.get(i).values()) : 0);
+            }
+            return Collections.max(ret_list);
+        } else {
+            return 0;
+        }
+    }
+}
+
+position:1
