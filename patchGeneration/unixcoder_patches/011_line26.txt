@@ -1,0 +1,10 @@
+/*
+public static void main(String[] args) {
+public static void main(String[] args) throws Exception {
+public static void main(String[] args) throws IOException {
+public static void main(String[] args) {     try {       java_programs();     } catch (Exception e) {       e.printStackTrace();     }   }
+
+public static void main(String[] args) {     try {       int height = Integer.parseInt(args[0]);       int start = Integer.parseInt(args[1]);       int end = Integer.parseInt(args[2]);       HANOI.hanoi(height, start, end);     } catch (Exception e) {       e.printStackTrace();     }   }
+public static void main(String[] args) {     try {       int height = Integer.parseInt(args[0]);       int start = Integer.parseInt(args[1]);       int end = Integer.parseInt(args[2]);       HANOI.hanoi(height, start, end);     } catch (NumberFormatException e) {       e.printStackTrace();     }   }
+public static void main(String[] args) {     try {       int height = Integer.parseInt(args[0]);       int start = Integer.parseInt(args[1]);       int end = Integer.parseInt(args[2]);       HANOI.hanoi(height, start, end);     } catch (NumberFormatException e) {       System.err.println(e.getMessage());     }   }
+public static void main(String[] args) {     try {       int height = Integer.parseInt(args[0]);       int start = Integer.parseInt(args[1]);       int end = Integer.parseInt(args[2]);       int helper = Integer.parseInt(args[3]);       int first = Integer.parseInt(args[4]);       int second = Integer.parseInt(args[5]);       int third = Integer.parseInt(args[6]);       int fourth = Integer.parseInt(args[7]);       int fifth = Integer.parseInt

@@ -1,0 +1,10 @@
+return value;
+return weight;
+return 0;
+return value;
+return value;
+weight++;
+return 0;
+weight = 0;
+memo[i] = weight;
+memo[i] = value;

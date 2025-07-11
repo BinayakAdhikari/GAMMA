@@ -1,0 +1,10 @@
+int popped = 0;
+
+int popped = 0;
+pop
+int popped;
+int popped;
+;
+pop();
+}
+int popped = k;

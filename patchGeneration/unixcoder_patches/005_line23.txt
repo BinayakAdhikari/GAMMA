@@ -1,0 +1,10 @@
+/*
+}
+
+
+public static boolean detect_cycle() {
+/*
+public boolean detect_cycle() {
+private boolean detect_cycle() {
+private void detect_cycle() {
+private static boolean detect_cycle() {

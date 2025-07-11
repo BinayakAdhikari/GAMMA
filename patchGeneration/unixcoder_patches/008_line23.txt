@@ -1,0 +1,10 @@
+/*
+public static Object flatten(Object arr) {
+public static void main(String[] args) {
+public static Object FLATTEN() {
+public static Object flatten(Object obj) {
+public static Object flatten(Object[] arr) {
+public Object FLATTEN() {
+static public Object flatten(Object arr) {
+public static Object FLATTEN(){
+

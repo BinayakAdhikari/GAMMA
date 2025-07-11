@@ -1,3 +1,4 @@
+import os
 from transformers import RobertaConfig,RobertaTokenizer,RobertaForMaskedLM,pipeline
 import math
 import torch
@@ -18,12 +19,14 @@ def fillMask(code, maskNum):
     res=[]
 
     if maskNum==1:
-        outputs=fill_mask(code)
+        outputs=fill_mask(code, top_k=10)
+        print(f"Raw outputs from fill_mask: {outputs}")
 
         for output in outputs:
             res.append(output)
 #            print(output)
         return res
+
 
     outputs=fill_mask(code)[0]
     for output in outputs:
@@ -34,9 +37,9 @@ def fillMask(code, maskNum):
         for j in range(0,250):
             output=outputs[j]
             if i!=maskNum-1:
-                tempOutputs=fill_mask(output['sequence'][3:-4])[0]
+                tempOutputs=fill_mask(output['sequence'][3:-4], top_k=50)[0]
             else:
-                tempOutputs=fill_mask(output['sequence'][3:-4])
+                tempOutputs=fill_mask(output['sequence'][3:-4], top_k=50)
             for o in tempOutputs:
                 o['tempJointScore']=(output['tempJointScore']*i+math.log(o['score']))/(i+1)
             newOutputs.extend(tempOutputs)
@@ -49,60 +52,83 @@ def fillMask(code, maskNum):
     return res
 
 
-def read_file_and_fill_mask():
-    with open("inputContextForCodebert.txt", 'r') as f:
-        content = f.read()
+def repair_from_quixbugs(input_path="patchGeneration/inputLines_quixbugs.txt", meta_path="patchGeneration/quixbugs_meta.txt", results_dir="patchGeneration/codebert_patches/"):
+    if not os.path.exists(results_dir):
+        os.makedirs(results_dir)
 
-    blocks = content.strip().split("\n---\n")
+    with open(input_path, "r") as f_in, open(meta_path, "r") as f_meta:
+        buggy_code = f_in.read()
+        meta_lines = f_meta.readlines()
 
-    for block in blocks:
-        lines = block.strip().split('\n')
-        if len(lines) < 2:
+    buggy_snippets = buggy_code.split("package java_programs;")
+    if buggy_snippets[0].strip() == "":
+        buggy_snippets.pop(0)
+
+    total_bugs = len(buggy_snippets)
+    masked_count = 0
+    patched_count = 0
+
+    print(f"Total buggy snippets: {total_bugs}")
+    for i, buggy_snippet in enumerate(buggy_snippets):
+        buggy_snippet = "package java_programs;" + buggy_snippet
+        print(f"\nProcessing snippet {i+1}/{total_bugs}...")
+
+        tokens = meta_lines[i].split()
+        try:
+            line_no = int(tokens[2])
+        except (IndexError, ValueError):
+            print(f"Invalid metadata format at line {i+1}, skipping...")
             continue
 
-        header = lines[0].strip()
-        print(f"[DEBUG] Header: '{header}'")  # 👈 Add this line
+        original_lines = buggy_snippet.splitlines()
+        if 0 <= line_no - 1 < len(original_lines):
+            masked_lines = list(original_lines) # Create a mutable copy
+            masked_lines[line_no - 1] = "<mask>"
+            masked_code = "\n".join(masked_lines)
+            masked_count += 1
+        else:
+            print(f"Warning: Invalid line number {line_no}. No masking applied.")
+            masked_code = buggy_snippet
 
-        parts = header.split('\t')
-        if len(parts) != 3:
-            print(f"[WARN] Skipping malformed header: '{header}'")
-            continue
-
-        bug_name, bug_line_str, buggy_code = parts
-        bug_line = int(bug_line_str)
-
-        code_lines = lines[1:]
-        if '<mask>' not in '\n'.join(code_lines):
-            continue
-
-        # Find which line has the <mask>
-        target_line_no = -1
-        for idx, l in enumerate(code_lines):
-            if '<mask>' in l:
-                target_line_no = idx
-                break
-
-        if target_line_no == -1:
-            print(f"[WARN] No mask found in bug: {bug_name}")
-            continue
-
-        context = '\n'.join(code_lines)
-        mask_num = context.count("<mask>")
+        # Truncate the input to the model
+        tokenized_input = tokenizer.tokenize(masked_code)
+        if len(tokenized_input) > 510:
+            tokenized_input = tokenized_input[:510]
+        masked_code = tokenizer.convert_tokens_to_string(tokenized_input)
 
         try:
-            res = fillMask(context, mask_num)
-            print(f"\n==== Predictions for {bug_name}, buggy line {bug_line} ====")
-            for idx, output in enumerate(res[:5]):
-                sequence = output['sequence']
-                sequence_lines = sequence.split('\n')
-                if target_line_no < len(sequence_lines):
-                    print(f"Suggestion {idx+1}: {sequence_lines[target_line_no]}")
-                    print(f"Score: {output['score']:.5f}")
-                else:
-                    print(f"[WARN] Output too short for line {target_line_no}")
-        except Exception as e:
-            print(f"[ERROR] Failed on {bug_name}: {e}")
+            patches = fillMask(masked_code, 1)
+            if patches:
+                patched_count += 1
+                output_path = os.path.join(results_dir, f"{i+1:03d}_line{line_no}.txt")
+                with open(output_path, "w") as f_out:
+                    for patch in patches:
+                        # Extract only the patched line
+                        patched_sequence_lines = patch['sequence'].splitlines()
+                        if 0 <= line_no - 1 < len(patched_sequence_lines):
+                            patched_line = patched_sequence_lines[line_no - 1].strip()
+                            f_out.write(patched_line + "\n")
+                        else:
+                            print(f"Warning: Patched sequence too short for bug {bugName}. Writing full sequence.")
+                            f_out.write(patch['sequence'] + "\n")
 
+                print("Top 5 fixes:")
+                for idx, patch in enumerate(patches[:5]):
+                    patched_sequence_lines = patch['sequence'].splitlines()
+                    if 0 <= line_no - 1 < len(patched_sequence_lines):
+                        print(f"Fix {idx + 1}: {patched_sequence_lines[line_no - 1].strip()}")
+                    else:
+                        print(f"Fix {idx + 1}: (Full sequence) {patch['sequence']}")
+            else:
+                print(f"No patches generated for snippet {i+1}.")
+        except Exception as e:
+            print(f"Error repairing snippet {i+1} at line {line_no}: {e}")
+
+    print("\n====== Summary ======")
+    print(f"Total buggy snippets: {total_bugs}")
+    print(f"Masked correctly     : {masked_count}")
+    print(f"Successfully patched : {patched_count}")
+    print(f"Check folder: {results_dir}")
 
 if __name__=='__main__':
-    read_file_and_fill_mask()
+    repair_from_quixbugs()

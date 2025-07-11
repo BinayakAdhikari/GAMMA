@@ -22,7 +22,7 @@ def insert_mask_token(code: str, buggy_line_num: int) -> str:
 def fill_mask(code_str, target_line):
     tokens_ids = model.tokenize([code_str], max_length=512, mode="<encoder-decoder>")
     source_ids = torch.tensor(tokens_ids).to(device)
-    prediction_ids = model.generate(source_ids, decoder_only=False, beam_size=25, max_length=128)
+    prediction_ids = model.generate(source_ids, decoder_only=False, beam_size=10, max_length=128)
     predictions = model.decode(prediction_ids)
     res = []
     for prediction in predictions[0]:
@@ -34,20 +34,25 @@ def fill_mask(code_str, target_line):
         res.append(output.strip())
     return res
 
-def repair_from_quixbugs(input_path="inputLines_quixbugs.txt", meta_path="quixbugs_meta.txt", results_dir="results/"):
+def repair_from_quixbugs(input_path="patchGeneration/inputLines_quixbugs.txt", meta_path="patchGeneration/quixbugs_meta.txt", results_dir="patchGeneration/unixcoder_patches/"):
     if not os.path.exists(results_dir):
         os.makedirs(results_dir)
 
     with open(input_path, "r") as f_in, open(meta_path, "r") as f_meta:
-        buggy_lines = f_in.readlines()
+        buggy_code = f_in.read()
         meta_lines = f_meta.readlines()
 
-    total_bugs = len(buggy_lines)
+    buggy_snippets = buggy_code.split("package java_programs;")
+    if buggy_snippets[0].strip() == "":
+        buggy_snippets.pop(0)
+
+    total_bugs = len(buggy_snippets)
     masked_count = 0
     patched_count = 0
 
     print(f"Total buggy snippets: {total_bugs}")
-    for i, buggy_snippet in enumerate(buggy_lines):
+    for i, buggy_snippet in enumerate(buggy_snippets):
+        buggy_snippet = "package java_programs;" + buggy_snippet
         print(f"\nProcessing snippet {i+1}/{total_bugs}...")
 
         tokens = meta_lines[i].split()

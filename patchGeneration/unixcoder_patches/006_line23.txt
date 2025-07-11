@@ -1,0 +1,10 @@
+/*
+}
+public static int find_first_in_sorted
+private static int find_first_in_sorted
+package java_programs;
+/*package
+public static void main(String[] args) {
+package java_programs
+private int find_first_in_sorted
+package java_programs;
