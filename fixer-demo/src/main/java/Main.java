@@ -1,22 +1,12 @@
 import java.io.IOException;
-import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.jdt.core.dom.*;
-
-import com.opencsv.CSVReader;
-import com.opencsv.CSVReaderBuilder;
-import com.opencsv.RFC4180Parser;
-import com.opencsv.RFC4180ParserBuilder;
-import com.opencsv.exceptions.CsvException;
 
 import fixer.Fixer;
 
 
 public class Main {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException { 
 
 //		List<String> allBugs=FileReader.readByBufferedReader("");
 //	    List<String> bugIds=new ArrayList();

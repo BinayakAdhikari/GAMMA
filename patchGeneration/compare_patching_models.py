@@ -1,7 +1,7 @@
 import torch
 import os
 import csv
-from patchGeneration.unixcoder import UniXcoder
+from unixcoder import UniXcoder
 from transformers import RobertaConfig, RobertaTokenizer, RobertaForMaskedLM, pipeline
 
 # --- Model Initialization ---
@@ -9,7 +9,7 @@ from transformers import RobertaConfig, RobertaTokenizer, RobertaForMaskedLM, pi
 unixcoder_device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 unixcoder_model = UniXcoder("microsoft/unixcoder-base")
 unixcoder_model.to(unixcoder_device)
-
+  
 # CodeBERT
 codebert_device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 codebert_tokenizer = RobertaTokenizer.from_pretrained("microsoft/codebert-base-mlm")
@@ -67,44 +67,18 @@ def codebert_fill_mask(code_str, original_code_lines, buggy_line_0_indexed, targ
             res.append(r['sequence'].strip()) # Fallback
     return res
 
-def parse_defects4j_summary(summary_file_path):
-    fixed = []
-    plausible = []
-    unfixed = []
-    current_section = None
 
-    try:
-        with open(summary_file_path, 'r') as f:
-            for line in f:
-                line = line.strip()
-                if line.startswith("fixed:"):
-                    current_section = fixed
-                elif line.startswith("plausible:"):
-                    current_section = plausible
-                elif line.startswith("unfixed:"):
-                    current_section = unfixed
-                elif line.startswith("total:"):
-                    pass # Ignore total lines for now
-                elif current_section is not None and line:
-                    current_section.append(line.split(':')[0].strip()) # Get project name
-    except FileNotFoundError:
-        print(f"Warning: Defects4J summary file not found at {summary_file_path}")
-    
-    return {
-        "fixed": fixed,
-        "plausible": plausible,
-        "unfixed": unfixed
-    }
 
 # --- Main Comparison Logic ---
 def compare_models_on_quixbugs(
-    meta_path=r"E:\Marburg Uni\Third Semester\GAMMA Seminar\GAMMA\patchGeneration\quixbugs_meta.txt",
-    input_lines_path=r"E:\Marburg Uni\Third Semester\GAMMA Seminar\GAMMA\patchGeneration\inputLines_quixbugs.txt",
-    defects4j_summary_path=r"E:\Marburg Uni\Third Semester\GAMMA Seminar\GAMMA\results\unixcoder_results\summary.txt",
+    meta_path="quixbugs_meta.txt",
+    input_lines_path="inputLines_quixbugs.txt",
+    defects4j_summary_path=os.path.join("..", "results", "unixcoder_results", "summary.txt"),
     num_quixbugs_snippets=20,
-    output_report_path=r"E:\Marburg Uni\Third Semester\GAMMA Seminar\GAMMA\model_patching_comparison_report.md",
-    output_csv_path=r"E:\Marburg Uni\Third Semester\GAMMA Seminar\GAMMA\patching_comparison_data.csv"
+    output_report_path="model_patching_comparison_report.md",
+    output_csv_path="patching_comparison_data.csv"
 ):
+
     report_content = []
     csv_data = []
 
@@ -212,30 +186,7 @@ def compare_models_on_quixbugs(
     report_content.append(f"UniXcoder generated patches for: {unixcoder_patched_count_quixbugs} snippets\n")
     report_content.append(f"CodeBERT generated patches for: {codebert_patched_count_quixbugs} snippets\n")
 
-    # --- Defects4J Summary Data (from pre-existing file) ---
-    defects4j_summary = parse_defects4j_summary(defects4j_summary_path)
-    report_content.append("\n## Defects4J Summary (UniXcoder - from existing summary file)\n")
-    report_content.append("This data is extracted from `results/unixcoder_results/summary.txt` and represents pre-computed results, not live patching.\n\n")
     
-    # CSV Header for Defects4J Summary
-    csv_data.append(["Dataset", "Project", "Model", "Fixed", "Plausible", "Unfixed"])
-
-    # Collect all unique project names from fixed, plausible, unfixed lists
-    all_defects4j_projects = sorted(list(set(
-        defects4j_summary["fixed"] +
-        defects4j_summary["plausible"] +
-        defects4j_summary["unfixed"]
-    )))
-
-    for project in all_defects4j_projects:
-        is_fixed = 1 if project in defects4j_summary["fixed"] else 0
-        is_plausible = 1 if project in defects4j_summary["plausible"] else 0
-        is_unfixed = 1 if project in defects4j_summary["unfixed"] else 0
-        
-        report_content.append(f"- **{project}**: Fixed: {is_fixed}, Plausible: {is_plausible}, Unfixed: {is_unfixed}\n")
-        csv_data.append(["Defects4J", project, "UniXcoder", is_fixed, is_plausible, is_unfixed])
-        # Add placeholder for CodeBERT Defects4J if no data is available
-        csv_data.append(["Defects4J", project, "CodeBERT", "N/A", "N/A", "N/A"])
 
     # Write Markdown Report
     with open(output_report_path, "w") as f_out:

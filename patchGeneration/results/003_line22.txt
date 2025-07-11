@@ -1,0 +1,25 @@
+def method_missing(method, *args, &block)       if Tools.respond_to?(method)         Tools.send(method, *args, &block)       elsif Templates.respond_to?(method)         Templates.send(method, *args, &block)       else         super       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to?(method)         Tools.send(method, *args, &block)       else         super       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to?(method)         Tools.send(method, *args, &block)       elsif Templates.respond_to?(method)         Templates.send(method, *args, &block)       end     end
+def method_missing(method, *args, &block)       if @templates.key?(method)         @templates[method]       else         super       end     end
+def method_missing(method, *args, &block)       if @templates.key?(method.to_s)         @templates[method.to_s]       else         super       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to? method         Tools.send(method, *args, &block)       elsif Templates.respond_to? method         Templates.send(method, *args, &block)       else         super       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to? method         Tools.send method, *args, &block       elsif Templates.respond_to? method         Templates.send method, *args, &block       else         super       end     end
+def method_missing(method, *args, &block)       if @templates.key?(method.to_sym)         @templates[method.to_sym]       else         super       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to? method         Tools.send method, *args, &block       else         super       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to? method         Tools.send(method, *args, &block)       else         super       end     end
+def method_missing(method, *args, &block)       if @templates.has_key?(method)         @templates[method]       else         super       end     end
+def method_missing(method, *args, &block)       if @templates.key?(method)         @templates[method].call(*args, &block)       else         super       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to?(method)         Tools.send(method, *args, &block)       elsif Templates.respond_to?(method)         Templates.send(method, *args)       else         super       end     end
+def method_missing(method, *args, &block)       if @templates.has_key?(method.to_sym)         @templates[method.to_sym]       else         super       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to?(method)         Tools.send(method, *args, &block)       elsif Template.respond_to?(method)         Template.send(method, *args, &block)       else         super       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to?(method)         Tools.send(method, *args)       elsif Templates.respond_to?(method)         Templates.send(method, *args)       else         super       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to?(method)         Tools.__send__(method, *args, &block)       elsif Templates.respond_to?(method)         Templates.__send__(method, *args, &block)       else         super       end     end
+def method_missing(method, *args, &block)       if @templates.has_key?(method.to_s)         @templates[method.to_s]       else         super       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to?(method.to_s)         Tools.send(method.to_s, *args, &block)       else         super       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to? method         Tools.send method, *args, &block       elsif Templates.respond_to? method         Templates.send method, *args, &block       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to? method         Tools.send(method, *args, &block)       elsif Templates.respond_to? method         Templates.send(method, *args, &block)       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to?(method)         Tools[method].call(*args, &block)       elsif Templates.respond_to?(method)         Templates[method].call(*args, &block)       else         super       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to?(method)         Tools[method]       elsif Templates.respond_to?(method)         Templates[method]       else         super       end     end
+def method_missing(method, *args, &block)       if Tools.respond_to?(method)         return Tools.send(method, *args, &block)       end       super     end
+def method_missing(method, *args, &block)       if Tools.respond_to?(method)         Tools.public_send(method, *args, &block)       elsif Templates.respond_to?(method)         Templates.public_send(method, *args, &block)       end     end

@@ -56,16 +56,26 @@ Line018	    public static boolean breadth_first_search(Node startnode, Node goal
 **Generated Patches (Top 5):**
 ```python
 - 
-- function breadth_first_search( Node startnode, Node goalnode )
-	{
-		if ( startnode == goalnode )
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+- function breadth_first_search( Node startnode, Node goalnode )
+
+	{
+
+		if ( startnode == goalnode )
+
+		{
+
+			return true;
+
+		}
+
+		else
+
+		{
+
+			return false;
+
+		}
+
 	}
 - function breadth_first_search(Node startnode, Node goalnode) {
 		while (startnode != null && goalnode != null) {
@@ -433,6 +443,7 @@ Line014	        if (arr instanceof ArrayList) {
 Line014	        if (arr instanceof ArrayList) {
 ```
 **Error during CodeBERT patching:** No mask_token (<mask>) found on the input
+
 
 ## 9. Program: GCD (Buggy Line: 17)
 **Bug Description:** Simulated bug in function of GCD.
