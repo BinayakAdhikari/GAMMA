@@ -1,10 +1,10 @@
-if (search(successornodes)) { return true; }
-if (search(successornodes)) { return true; }
-if (search(successornodes)) { return true; }
-if (search(successornodes)) { return true; }
-if (search(successornodes)) { return true; }
-if (search(successornodes)) { return true; }
-if (search(successornodes)) { return true; }
-if (search(successornodes)) { return true; }
-if (search(successornodes)) { return true; }
-if (search(successornodes)) { return true; }
+return true;
+return true;
+return true;
+return true;
+return true;
+return true;
+return true;
+return true;
+return true;
+return true;

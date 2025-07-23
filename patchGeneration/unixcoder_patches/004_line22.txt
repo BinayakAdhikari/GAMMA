@@ -1,10 +1,51 @@
-/*
-}
-try {
-synchronized
-if (debug) {
-if (DEBUG) {
-if (debug)
-if (verbose) {
-if (DEBUG)
-if (true) {
+@Override
+function(node) {
+public void open(Node node) {
+public void open(Node startnode) {
+public void open(Node startnode, Node goalnode) {
+
+public static void main(String[] args) {
+    if (args.length < 1) {
+      System.err.println("Usage: java_programs DEPTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 2) {
+      System.err.println("Usage: java_programs DEPTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 3) {
+      System.err.println("Usage: java_programs
+public static void main(String[] args) {
+    if (args.length < 1) {
+      System.err.println("Usage: java_programs DEPTH_FIRST_SEARCH goalnode");
+      System.exit(1);
+    }
+    if (args.length < 2) {
+      System.err.println("Usage: java_programs DEPTH_FIRST_SEARCH goalnode");
+      System.exit(1);
+    }
+    if (args.length < 3) {
+      System.err.println("Usage: java_programs
+public static void main(String[] args) {
+    if (args.length < 1) {
+      System.err.println("Usage: java_programs DEPTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 2) {
+      System.err.println("Usage: java_programs DEPTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    Node goalnode = args[0];
+    Node successornodes = args[1];
+    if (goal
+public static void main(String[] args) {
+    if (args.length < 1) {
+      System.err.println("Usage: java_programs DEPTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 2) {
+      System.err.println("Usage: java_programs DEPTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    Node goalnode = args[0];
+    for (Node successornodes : goalnode.getSuccessors()) {

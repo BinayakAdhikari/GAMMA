@@ -1,10 +1,10 @@
-if (hare == tortoise)
-if (hare == tortoise)
-if (hare == tortoise)
-if (hare == tortoise)
-if (hare == tortoise)
-if (hare == tortoise)
-if (hare == tortoise)
-if (hare == tortoise)
-if (hare == tortoise)
-if (hare == tortoise)
+tortoise = tortoise.getSuccessor();
+tortoise = tortoise.getSuccessor();
+tortoise = tortoise.getSuccessor();
+tortoise = tortoise.getSuccessor();
+tortoise = tortoise.getSuccessor();
+tortoise = tortoise.getSuccessor();
+tortoise = tortoise.getSuccessor();
+tortoise = tortoise.getSuccessor();
+tortoise = tortoise.getSuccessor();
+tortoise = tortoise.getSuccessor();

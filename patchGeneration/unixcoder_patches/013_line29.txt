@@ -1,10 +1,53 @@
-int popped = 0;
+public static int heapsort(ArrayList<Integer> arr, int k) {
+public static List<Integer> kheapsort(ArrayList<Integer> arr, int k) {
+    return kheapsort(arr, k);
+  }
+public static int heapsort(ArrayList<Integer> arr, int k) {
+    return heapsort(arr, k, 0);
+  }
+public static List<Integer> kheapsort(ArrayList<Integer> arr, int k) {
+    ArrayList<Integer> output = new ArrayList<Integer>();
+    for (Integer x : arr) {
+      output.add(x);
+    }
+    return output;
+  }
+public static List<Integer> kheapsort(ArrayList<Integer> arr, int k) {
+    ArrayList<Integer> output = new ArrayList<Integer>();
+    while (!heap.isEmpty()) {
+      Integer popped = heap.poll();
+      output.add(popped);
+    }
+    return output;
+  }
 
-int popped = 0;
-pop
-int popped;
-int popped;
-;
-pop();
-}
-int popped = k;
+public static List<Integer> kheapsort(ArrayList<Integer> arr, int k) {
+    List<Integer> output = new ArrayList<Integer>();
+    for (Integer x : arr) {
+      output.add(x);
+    }
+    return output;
+  }
+public static List<Integer> kheapsort(ArrayList<Integer> arr, int k) {
+    ArrayList<Integer> output = new ArrayList<Integer>();
+    for (int i = 0; i < k; i++) {
+      output.add(i);
+    }
+    return output;
+  }
+public static List<Integer> heapsort(ArrayList<Integer> arr, int k) {
+    ArrayList<Integer> output = new ArrayList<Integer>();
+    while (!heap.isEmpty()) {
+      Integer popped = heap.poll();
+      output.add(popped);
+    }
+    return output;
+  }
+public static List<Integer> kheapsort(ArrayList<Integer> arr, int k) {
+    ArrayList<Integer> output = new ArrayList<Integer>();
+    while (!heap.isEmpty()) {
+      int popped = heap.poll();
+      output.add(popped);
+    }
+    return output;
+  }

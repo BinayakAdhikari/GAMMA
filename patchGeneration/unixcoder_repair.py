@@ -19,19 +19,18 @@ def insert_mask_token(code: str, buggy_line_num: int) -> str:
         print(f"Warning: Invalid line number {buggy_line_num}. No masking applied.")
         return code
 
-def fill_mask(code_str, target_line):
-    tokens_ids = model.tokenize([code_str], max_length=512, mode="<encoder-decoder>")
+def fill_mask(code_str, buggy_line, target_line):
+    prompt = f"""The following Java code is buggy:\n\n{code_str}\n\nThe bug is in the following line:\n\n{buggy_line}\n\nPlease provide a corrected version of this line.\n"""
+    tokens_ids = model.tokenize([prompt], max_length=512, mode="<encoder-decoder>")
     source_ids = torch.tensor(tokens_ids).to(device)
     prediction_ids = model.generate(source_ids, decoder_only=False, beam_size=10, max_length=128)
     predictions = model.decode(prediction_ids)
     res = []
     for prediction in predictions[0]:
-        tmp = target_line.replace('<mask0>', prediction.replace('<mask0>', '')).split('\n')
-        output = ''
-        for line in tmp:
-            output += line
-            output += ' '
-        res.append(output.strip())
+        # Assuming the model outputs the corrected line directly
+        # or the first line of the prediction is the corrected line.
+        corrected_line = prediction.replace('<mask0>', '').strip().splitlines()[0]
+        res.append(corrected_line)
     return res
 
 def repair_from_quixbugs(input_path="patchGeneration/inputLines_quixbugs.txt", meta_path="patchGeneration/quixbugs_meta.txt", results_dir="patchGeneration/unixcoder_patches/"):
@@ -66,7 +65,7 @@ def repair_from_quixbugs(input_path="patchGeneration/inputLines_quixbugs.txt", m
         masked_count += 1
 
         try:
-            patches = fill_mask(masked_code, "<mask0>")
+            patches = fill_mask(masked_code, buggy_snippet.splitlines()[line_no - 1], "<mask0>")
             if patches:
                 patched_count += 1
                 output_path = os.path.join(results_dir, f"{i+1:03d}_line{line_no}.txt")

@@ -15,11 +15,12 @@ fill_mask = pipeline('fill-mask',
 
 
 
-def fillMask(code, maskNum):
+def fillMask(code, buggy_line, maskNum):
+    prompt = f"""The following Java code is buggy:\n\n{code}\n\nThe bug is in the following line:\n\n{buggy_line}\n\nPlease provide a corrected version of this line.\n"""
     res=[]
 
     if maskNum==1:
-        outputs=fill_mask(code, top_k=10)
+        outputs=fill_mask(prompt, top_k=10)
         print(f"Raw outputs from fill_mask: {outputs}")
 
         for output in outputs:
@@ -97,7 +98,7 @@ def repair_from_quixbugs(input_path="patchGeneration/inputLines_quixbugs.txt", m
         masked_code = tokenizer.convert_tokens_to_string(tokenized_input)
 
         try:
-            patches = fillMask(masked_code, 1)
+            patches = fillMask(masked_code, original_lines[line_no - 1], 1)
             if patches:
                 patched_count += 1
                 output_path = os.path.join(results_dir, f"{i+1:03d}_line{line_no}.txt")

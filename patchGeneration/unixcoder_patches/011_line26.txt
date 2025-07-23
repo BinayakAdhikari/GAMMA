@@ -1,10 +1,86 @@
-/*
-public static void main(String[] args) {
-public static void main(String[] args) throws Exception {
-public static void main(String[] args) throws IOException {
-public static void main(String[] args) {     try {       java_programs();     } catch (Exception e) {       e.printStackTrace();     }   }
 
-public static void main(String[] args) {     try {       int height = Integer.parseInt(args[0]);       int start = Integer.parseInt(args[1]);       int end = Integer.parseInt(args[2]);       HANOI.hanoi(height, start, end);     } catch (Exception e) {       e.printStackTrace();     }   }
-public static void main(String[] args) {     try {       int height = Integer.parseInt(args[0]);       int start = Integer.parseInt(args[1]);       int end = Integer.parseInt(args[2]);       HANOI.hanoi(height, start, end);     } catch (NumberFormatException e) {       e.printStackTrace();     }   }
-public static void main(String[] args) {     try {       int height = Integer.parseInt(args[0]);       int start = Integer.parseInt(args[1]);       int end = Integer.parseInt(args[2]);       HANOI.hanoi(height, start, end);     } catch (NumberFormatException e) {       System.err.println(e.getMessage());     }   }
-public static void main(String[] args) {     try {       int height = Integer.parseInt(args[0]);       int start = Integer.parseInt(args[1]);       int end = Integer.parseInt(args[2]);       int helper = Integer.parseInt(args[3]);       int first = Integer.parseInt(args[4]);       int second = Integer.parseInt(args[5]);       int third = Integer.parseInt(args[6]);       int fourth = Integer.parseInt(args[7]);       int fifth = Integer.parseInt
+public static <F, S> List<Pair<F, S>> hanoi(int height, int start, int end) {
+    List<Pair<F, S>> steps = new ArrayList<Pair<F, S>>();
+    for (int i = start; i <= end; i++) {
+      Pair<F, S> step = new Pair<F, S>();
+      step.first = i;
+      step.second = i;
+      steps.add(step);
+    }
+    return steps;
+  }
+public static <F, S> List<Pair<F, S>> hanoi(int height, int start, int end) {
+    List<Pair<F, S>> steps = new ArrayList<Pair<F, S>>();
+    for (int i = 0; i < height; i++) {
+      Pair<F, S> step = new Pair<F, S>(start, end);
+      steps.add(step);
+    }
+    return steps;
+  }
+public static <F, S> List<Pair<F, S>> hanoi(int height, int start, int end) {
+    List<Pair<F, S>> steps = new ArrayList<Pair<F, S>>();
+    for (int i = start; i <= end; i++) {
+      Pair<F, S> step = new Pair<F, S>(i, i);
+      steps.add(step);
+    }
+    return steps;
+  }
+public static <F, S> List<Pair<F, S>> hanoi(int height, int start, int end) {
+    List<Pair<F, S>> steps = new ArrayList<Pair<F, S>>();
+    for (int i = 0; i < height; i++) {
+      Pair<F, S> step = new Pair<F, S>();
+      step.first = start;
+      step.second = end;
+      steps.add(step);
+    }
+    return steps;
+  }
+public static <F, S> List<Pair<F, S>> hanoi(int height, int start, int end) {
+    List<Pair<F, S>> steps = new ArrayList<Pair<F, S>>();
+    for (int i = 0; i < height; i++) {
+      Pair<F, S> step = new Pair<F, S>(i, start, end);
+      steps.add(step);
+    }
+    return steps;
+  }
+public static <F, S> List<Pair<F, S>> hanoi(int height, int start, int end) {
+    List<Pair<F, S>> steps = new ArrayList<Pair<F, S>>();
+    for (int i = start; i <= end; i++) {
+      Pair<F, S> step = new Pair<F, S>();
+      step.setFirst(i);
+      step.setSecond(i);
+      steps.add(step);
+    }
+    return steps;
+  }
+public static <F, S> List<Pair<F, S>> hanoi(int height, int start, int end) {
+    List<Pair<F, S>> steps = new ArrayList<Pair<F, S>>();
+    for (int i = start; i <= end; i++) {
+      Pair<F, S> step = new Pair<F, S>();
+      step.first = i;
+      step.second = i;
+      steps.add(step);
+    }
+    Collections.sort(steps);
+    return steps;
+  }
+public static <F, S> List<Pair<F, S>> hanoi(int height, int start, int end) {
+    List<Pair<F, S>> steps = new ArrayList<Pair<F, S>>();
+    for (int i = start; i <= end; i++) {
+      Pair<F, S> step = new Pair<F, S>();
+      step.first = i;
+      step.second = i;
+      steps.add(step);
+    }
+    Collections.reverse(steps);
+    return steps;
+  }
+public static <F, S> List<Pair<F, S>> hanoi(int height, int start, int end) {
+    List<Pair<F, S>> steps = new ArrayList<Pair<F, S>>();
+    for (int i = start; i <= end; i++) {
+      Pair<F, S> step = new Pair<F, S>();
+      step.first = i;
+      step.second = i;
+      steps.add(step);
+    }
+    for (int i = start; i <= end; i++) {

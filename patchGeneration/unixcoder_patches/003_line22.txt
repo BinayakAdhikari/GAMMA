@@ -1,10 +1,59 @@
-for (Integer count : arr) {
-public static void main(String[] args) {
-public static void main(String[] args) {
-for (int count : arr) {
-for (Integer count : counts) {
-for (Integer count : arr)
-for (Integer count : counts)
-public int bucketsort(int count) {
-public static int bucketsort(int count) {
+public static int bucketsort(ArrayList<Integer> arr, int k) {
+public static ArrayList<Integer> bucketsort(ArrayList<Integer> arr, int k) {
+        ArrayList<Integer> sorted_arr = new ArrayList<Integer>();
+        for (Integer x : arr) {
+            sorted_arr.add(x);
+        }
+        return sorted_arr;
+    }
+public static ArrayList<Integer> bucketsort(ArrayList<Integer> arr, int k) {
+    ArrayList<Integer> sorted_arr = new ArrayList<Integer>();
+    for (Integer x : arr) {
+      sorted_arr.add(x);
+    }
+    return sorted_arr;
+  }
+public static ArrayList<Integer> bucketsort(ArrayList<Integer> arr, int k) {
+        ArrayList<Integer> sorted_arr = new ArrayList<Integer>(100);
+        for (Integer x : arr) {
+            sorted_arr.add(x);
+        }
+        return sorted_arr;
+    }
+public static ArrayList<Integer> bucketsort(ArrayList<Integer> arr, int k) {
+    ArrayList<Integer> sorted_arr = new ArrayList<Integer>(100);
+    for (Integer x : arr) {
+      sorted_arr.add(x);
+    }
+    return sorted_arr;
+  }
+public static ArrayList<Integer> bucketsort(ArrayList<Integer> arr, int k) {
+        ArrayList<Integer> sorted_arr = new ArrayList<Integer>();
+        for (int x : arr) {
+            sorted_arr.add(x);
+        }
+        return sorted_arr;
+    }
 
+public static ArrayList<Integer> bucketsort(ArrayList<Integer> arr, int k) {
+        ArrayList<Integer> sorted_arr = new ArrayList<Integer>();
+        for (Integer x : arr) {
+            sorted_arr.add(x);
+        }
+        return sorted_arr;
+    }
+}
+public static ArrayList<Integer> bucketsort(ArrayList<Integer> arr, int k) {
+        ArrayList<Integer> sorted_arr = new ArrayList<Integer>();
+        for (Integer x : arr) {
+            sorted_arr.add(x);
+        }
+        return sorted_arr;
+    }
+public static ArrayList<Integer> bucketsort(ArrayList<Integer> arr, int k) {
+        ArrayList<Integer> sorted_arr = new ArrayList<Integer>(100);
+        for (Integer x : arr) {
+            sorted_arr.add(x);
+        }
+        return sorted_arr;
+    }

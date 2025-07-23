@@ -1,0 +1,1 @@
+cd patchGeneration/QuixBugs && gradle test --tests BITCOUNT_TEST

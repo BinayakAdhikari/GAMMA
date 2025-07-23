@@ -1,10 +1,73 @@
-}
-} else {
-}
-}
-}
-}
-}
-}  */
-}<mask5> }
+public static String longest_common_subsequence(String a, String b) {
+public static String longest_common_subsequence(String a, String b) {
+        if (a.length() > b.length()) {
+            return a + b;
+        } else {
+            return a;
+        }
+    }
+public static String longest_common_subsequence(String a, String b) {
+        if (a.length() > b.length()) {
+            return a + b;
+        } else {
+            return a + b;
+        }
+    }
 
+public static String longest_common_subsequence(String a, String b) {
+        if (a.length() == b.length()) {
+            return a;
+        } else if (a.length() == b.length()) {
+            return b;
+        } else {
+            return a + b;
+        }
+    }
+public static String longest_common_subsequence(String a, String b) {
+        if (a.length() == b.length()) {
+            return a;
+        } else if (a.length() > b.length()) {
+            return b;
+        } else {
+            return a + b;
+        }
+    }
+public static String longest_common_subsequence(String a, String b) {
+        if (a.length() == b.length()) {
+            return a;
+        } else if (a.length() > b.length()) {
+            return b;
+        } else {
+            return a + b;
+        }
+    }
+}
+public static String longest_common_subsequence(String a, String b) {
+        if (a.length() == b.length()) {
+            return a;
+        } else if (a.length() == b.length()) {
+            return b;
+        } else {
+            return a + b;
+        }
+    }
+}
+public static String longest_common_subsequence(String a, String b) {
+        if (a.length() == b.length()) {
+            return a;
+        } else if (a.length() > b.length()) {
+            return a + b;
+        } else {
+            return a + b;
+        }
+    }
+public static String longest_common_subsequence(String a, String b) {
+        if (a.length() == b.length()) {
+            return a;
+        } else if (a.length() > b.length()) {
+            return a + b;
+        } else {
+            return a + b;
+        }
+    }
+}

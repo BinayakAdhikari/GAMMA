@@ -1,10 +1,48 @@
+public static void main(String[] args) {
+public static void main(String[] args) throws Exception {
 public static int lcs_length(String s, String t) {
 public static void main(String[] args) {
-public int lcs_length(String s, String t) {
-public static int lcs(String s, String t) {
-public static List<Integer> lcs(String s, String t) {
-public static void main(String[] args) {         try {
+        try {
+public static void main(String[] args)
+    {
+        try {
+public static void main(String[] args)
+    {
+        try
+        {
 
-public static void main(String[] args) {         if (args.length < 2) {             System.out.println("Usage: lcs_length <s> <t>");             System.exit(-1);         }         String s = args[0];         String t = args[1];         if (s == null || t == null) {             System.out.println("Usage: lcs_length <s> <t>");             System.exit(-1);         }         try {             lcs_length(s,
-public static void main(String[] args) {         if (args.length < 2) {             System.out.println("Usage: lcs_length <s> <t>");             System.exit(1);         }         String s = args[0];         String t = args[1];         if (s == null || t == null) {             System.out.println("Usage: lcs_length <s> <t>");             System.exit(1);         }         try {             lcs_length(s,
-public static void main(String[] args) {         if (args.length < 2) {             System.out.println("Usage: lcs_length <s> <t>");             System.exit(-1);         }         String s = args[0];         String t = args[1];         if (s == null || t == null) {             System.out.println("Usage: lcs_length <s> <t>");             System.exit(-1);         }         if (s.length() == 0) {
+public static void main(String[] args) {
+        if (args.length < 2) {
+            System.out.println("Usage: lcs_length <s> <t>");
+            System.exit(-1);
+        }
+        if (args.length < 3) {
+            System.out.println("Usage: lcs_length <s> <t>");
+            System.exit(-1);
+        }
+        lcs_length(args[0], args[1]);
+    }
+public static void main(String[] args) {
+        if (args.length < 2) {
+            System.out.println("Usage: lcs_length <s> <t>");
+            System.exit(-1);
+        }
+        if (args.length < 3) {
+            System.out.println("Usage: lcs_length <s> <t>");
+            System.exit(-1);
+        }
+        if (args.length < 4) {
+            System.out.println("Usage: lcs_length <s> <t>");
+public static void main(String[] args) {
+        if (args.length < 2) {
+            System.out.println("Usage: lcs_length <s> <t>");
+            System.exit(-1);
+        }
+        if (args.length < 3) {
+            System.out.println("Usage: lcs_length <s> <t>");
+            System.exit(-1);
+        }
+        String s1 = args[0];
+        String t1 = args[1];
+        String s2 = args[2];
+        String

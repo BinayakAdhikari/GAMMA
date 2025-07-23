@@ -1,10 +1,10 @@
-} else if (x > arr[mid]) {
-} else if (x > arr[mid]) {
-} else if (x > arr[mid]) {
-} else if (x > arr[mid]) {
-} else if (x > arr[mid]) {
-} else if (x > arr[mid]) {
-} else if (x > arr[mid]) {
-} else if (x > arr[mid]) {
-} else if (x > arr[mid]) {
-} else if (x > arr[mid]) {
+int mid = start + (end - start) / 2; // check this is floor division
+int mid = start + (end - start) / 2; // check this is floor division
+int mid = start + (end - start) / 2; // check this is floor division
+int mid = start + (end - start) / 2; // check this is floor division
+int mid = start + (end - start) / 2; // check this is floor division
+int mid = start + (end - start) / 2; // check this is floor division
+int mid = start + (end - start) / 2; // check this is floor division
+int mid = start + (end - start) / 2; // check this is floor division
+int mid = start + (end - start) / 2; // check this is floor division
+int mid = start + (end - start) / 2; // check this is floor division

@@ -1,10 +1,76 @@
-/*
-}
-
+public static boolean detect_cycle(Node node) {
 
 public static boolean detect_cycle() {
-/*
-public boolean detect_cycle() {
-private boolean detect_cycle() {
-private void detect_cycle() {
-private static boolean detect_cycle() {
+        Node hare = node;
+        while (true) {
+            if (hare.getSuccessor() == null)
+                return false;
+            hare = hare.getSuccessor().getSuccessor();
+        }
+        return true;
+    }
+public static boolean detect_cycle() {
+        Node hare = node;
+        while (true) {
+            hare = hare.getSuccessor();
+            if (hare == null)
+                return false;
+        }
+        return true;
+    }
+public static boolean detect_cycle() {
+        Node hare = node;
+        while (true) {
+            hare = hare.getSuccessor();
+            if (hare == node)
+                return true;
+        }
+        return false;
+    }
+public static boolean detect_cycle() {
+        Node hare = node;
+        while (true) {
+            if (hare == null)
+                return false;
+            hare = hare.getSuccessor();
+        }
+        return true;
+    }
+public static boolean detect_cycle() {
+        Node hare = node;
+        while (true) {
+            if (hare.getNext() == null)
+                return false;
+            hare = hare.getNext();
+        }
+        return true;
+    }
+public static boolean detect_cycle() {
+        Node hare = node;
+        Node tortoise = node;
+        while (true) {
+            if (hare == tortoise)
+                return true;
+            hare = hare.getSuccessor();
+        }
+        return false;
+    }
+public static boolean detect_cycle() {
+        Node hare = node;
+        while (true) {
+            if (hare.getSuccessor() == null)
+                return false;
+            hare = hare.getSuccessor().getSuccessor();
+        }
+        return false;
+    }
+public static boolean detect_cycle() {
+        Node hare = node;
+        while (true) {
+            if (hare.getSuccessor() == null)
+                return false;
+            hare = hare.getSuccessor().getSuccessor();
+            if (hare == node)
+                return true;
+        }
+    }

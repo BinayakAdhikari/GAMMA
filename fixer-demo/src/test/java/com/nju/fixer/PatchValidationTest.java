@@ -27,7 +27,7 @@ public class PatchValidationTest {
     private static final String META_FILE = PROJECT_ROOT + "patchGeneration" + File.separator + "quixbugs_meta.txt";
     private static final String UNIXCODER_PATCHES_DIR = PROJECT_ROOT + "patchGeneration" + File.separator + "unixcoder_patches" + File.separator;
     private static final String CODEBERT_PATCHES_DIR = PROJECT_ROOT + "patchGeneration" + File.separator + "codebert_patches" + File.separator;
-    private static final String REPORT_CSV_PATH = PROJECT_ROOT + "gemini_output" + File.separator + "patch_validation_report.csv";
+    private static final String REPORT_CSV_PATH = PROJECT_ROOT + "test_output" + File.separator + "patch_validation_report.csv";
 
     private List<PatchResult> allPatchResults = new ArrayList<>();
 

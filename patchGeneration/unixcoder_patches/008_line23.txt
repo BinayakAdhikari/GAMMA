@@ -1,10 +1,84 @@
-/*
 public static Object flatten(Object arr) {
-public static void main(String[] args) {
-public static Object FLATTEN() {
 public static Object flatten(Object obj) {
 public static Object flatten(Object[] arr) {
-public Object FLATTEN() {
-static public Object flatten(Object arr) {
-public static Object FLATTEN(){
+public Object flatten(Object arr) {
 
+public static <T> T[] flatten(T[] arr) {
+        if (arr == null) {
+            return null;
+        }
+        if (arr.length == 0) {
+            return arr;
+        }
+        T[] result = new T[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            result[i] = arr[i];
+        }
+        return result;
+    }
+public static <T> T[] flatten(T[] arr) {
+        if (arr == null) {
+            return null;
+        }
+        if (arr.length == 0) {
+            return arr;
+        }
+        T[] result = new T[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            result[i] = flatten(arr[i]);
+        }
+        return result;
+    }
+public static Object flatten(Object[] arr) {
+        if (arr == null) {
+            return null;
+        }
+        if (arr.length == 0) {
+            return arr;
+        }
+        if (arr.length == 1) {
+            return arr[0];
+        }
+        if (arr.length == 2) {
+            return arr[0];
+        }
+        if (arr.length == 3) {
+            return arr[0];
+        }
+        if (arr.length == 4) {
+            return arr[0];
+public static Object flatten(Object[] arr) {
+        if (arr == null) {
+            return null;
+        }
+        if (arr.length == 0) {
+            return arr;
+        }
+        if (arr.length == 1) {
+            return arr[0];
+        }
+        if (arr.length == 2) {
+            return flatten(arr[0]);
+        }
+        if (arr.length == 3) {
+            return flatten(arr[0], flatten(arr[1]));
+        }
+        if (arr.length ==
+public static Object flatten(Object[] arr) {
+        if (arr == null) {
+            return null;
+        }
+        if (arr.length == 0) {
+            return arr;
+        }
+        if (arr.length == 1) {
+            return arr[0];
+        }
+        if (arr.length == 2) {
+            return flatten(arr[0]);
+        }
+        if (arr.length == 3) {
+            return flatten(arr[0]);
+        }
+        if (arr.length == 4) {
+            return

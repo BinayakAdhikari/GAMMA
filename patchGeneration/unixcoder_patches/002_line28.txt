@@ -1,10 +1,100 @@
-return true;
-break;
-return false;
-return true;
-continue;
-break;
-return false;
-return true;
-return true;
 
+public static void main(String[] args) {
+    if (args.length < 2) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 3) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 4) {
+      System.err.println("Usage: java_programs
+public static void main(String[] args) {
+    if (args.length < 1) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 2) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 3) {
+      System.err.println("Usage: java_programs
+public static void main(String[] args) throws Exception {
+    if (args.length < 1) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 2) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 3) {
+      System.err.println("Usage: java_
+public static void main(String[] args) throws Exception {
+    if (args.length < 2) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 3) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 4) {
+      System.err.println("Usage: java_
+public static void main(String[] args) {
+    if (args.length < 1) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 2) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args[0].equals("BREADTH_FIRST_SEARCH")) {
+      System.out.
+public static void main(String[] args) {
+    if (args.length < 2) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 3) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args[0].equals("BREADTH_FIRST_SEARCH")) {
+      System.out.
+public static void main(String[] args) {
+    if (args.length < 1) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 2) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args[0].equals("BREADTH_FIRST_SEARCH")) {
+      System.err.
+public static void main(String[] args) {
+    if (args.length < 2) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 3) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args[0].equals("BREADTH_FIRST_SEARCH")) {
+      System.err.
+public static void main(String[] args) throws Exception {
+    if (args.length < 1) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args.length < 2) {
+      System.err.println("Usage: java_programs BREADTH_FIRST_SEARCH goalnode");
+      System.exit(-1);
+    }
+    if (args[0].equals("BREADTH_FIRST_SEARCH")) {
+      System.

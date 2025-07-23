@@ -1,10 +1,50 @@
-/*
-}
-public static int find_first_in_sorted
-private static int find_first_in_sorted
-package java_programs;
-/*package
-public static void main(String[] args) {
-package java_programs
-private int find_first_in_sorted
-package java_programs;
+public static int find_first_in_sorted(int[] arr, int x) {
+        return find_first_in_sorted(arr, x);
+    }
+public static int find_first_in_sorted(int[] arr, int x) {
+        return find_first_in_sorted(arr, x - 1);
+    }
+public static int find_first_in_sorted(int[] arr, int x) {
+    return find_first_in_sorted(arr, x);
+  }
+public static int find_first_in_sorted(int[] arr, int x) {
+    return find_first_in_sorted(arr, x - 1);
+  }
+public static int find_first_in_sorted(int[] arr, int x) {
+        return find_first_in_sorted(arr, x, arr[0]);
+    }
+public static int find_first_in_sorted(int[] arr, int x) {
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] == x) {
+        return i;
+      }
+    }
+    return -1;
+  }
+public static int find_first_in_sorted(int[] arr, int x) {
+    return find_first_in_sorted(arr, x, arr[0]);
+  }
+public static int find_first_in_sorted(int[] arr, int x) {
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] <= x) {
+        return i;
+      }
+    }
+    return -1;
+  }
+public static int find_first_in_sorted(int[] arr, int x) {
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] < x) {
+        return i;
+      }
+    }
+    return -1;
+  }
+public static int find_first_in_sorted(int[] arr, int x) {
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] >= x) {
+        return i;
+      }
+    }
+    return -1;
+  }
